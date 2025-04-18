@@ -12,8 +12,7 @@ import { loginSchema, registerSchema } from "../schemas";
 const app = new Hono()
   .get("/current", sessionMiddleware, async (c) => {
     const user = c.get("user");
-    console.log(user);
-
+    
     return c.json({ data: user });
   })
   .post("/register", zValidator("json", registerSchema), async (c) => {

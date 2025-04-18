@@ -3,7 +3,6 @@ import { getCurrent } from "@/features/auth/getCurrUser";
 
 const SignIn = async () => {
     const user = await getCurrent();
-    console.log("User", user);
     if (!user) return <SignInCard />;
 };
 

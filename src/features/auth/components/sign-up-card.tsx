@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 
 import { DottedSeparator } from "@/components/dotted-separator";
@@ -20,19 +21,26 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { type RegisterSchema, registerSchema } from "../schemas";
+import { useRegister } from "../api/use-register";
 import { Eye, EyeOff } from "lucide-react";
 
 export const SignUpCard = () => {
-  const form = useForm({
+  const { mutate, isPending } = useRegister();
+  const form = useForm<RegisterSchema>({
+    resolver: zodResolver(registerSchema),
     defaultValues: {
       name: "",
       email: "",
       password: "",
     },
   });
-  // mutate function
 
   const [showPassword, setShowPassword] = useState(false);
+
+  const onSubmit = (values: RegisterSchema) => {
+    mutate({ json: values });
+  };
 
   return (
     <Card className="size-full border-none bg-slate-200 shadow-none dark:bg-zinc-800 md:w-[487px]">
@@ -58,7 +66,7 @@ export const SignUpCard = () => {
       </div>
       <CardContent className="p-7">
         <Form {...form}>
-          <form className="space-y-4">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
             <FormField
               name="name"
               control={form.control}
@@ -125,7 +133,7 @@ export const SignUpCard = () => {
                 </FormItem>
               )}
             />
-            <Button className="w-full" size="lg">
+            <Button className="w-full" size="lg" disabled={isPending}>
               Register
             </Button>
           </form>
