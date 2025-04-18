@@ -82,11 +82,7 @@ export const CreateWorkspaceForm = ({ onCancel }: CreateWorkspaceFormProps) => {
                   <FormItem>
                     <FormLabel>Workspace name</FormLabel>
                     <FormControl>
-                      <Input
-                        {...field}
-                        placeholder="Enter workspace name"
-                        className="border border-slate-200"
-                      />
+                      <Input {...field} placeholder="Enter workspace name" className="border border-slate-200"/>
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -171,19 +167,11 @@ export const CreateWorkspaceForm = ({ onCancel }: CreateWorkspaceFormProps) => {
                 variant="secondary"
                 onClick={onCancel}
                 disabled={isPending}
-                className={
-                  cn(!onCancel && "invisible") +
-                  "dark:bg-gray-800 dark:text-gray-100 text-black"
-                }
+                className={cn(!onCancel && "invisible")+ "dark:bg-gray-800 dark:text-gray-100 text-black" }
               >
                 Cancel
               </Button>
-              <Button
-                disabled={isPending}
-                type="submit"
-                size="lg"
-                className="dark:bg-gray-800 dark:text-gray-100 bg-slate-200 text-black hover:bg-slate-300"
-              >
+              <Button disabled={isPending} type="submit" size="lg" className="dark:bg-gray-800 dark:text-gray-100 bg-slate-200 text-black hover:bg-slate-300">
                 Create workspace
               </Button>
             </div>
