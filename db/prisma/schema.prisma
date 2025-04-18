@@ -14,11 +14,41 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
-  id        Int      @id @default(autoincrement())
-  username  String
-  email     String   @unique
-  password  String
+model User{
+  id Int @id @default(autoincrement())
+  username String
+  email String @unique
+  password String
+  workspaces Workspace[]
+  members Members[]
+
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+}
+
+model Workspace{
+  id Int @id @default(autoincrement())
+  name String
+  userId Int
+  user User @relation(fields: [userId], references: [id])
+  inviteCode String @unique
+  members Members[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Members{
+  id Int @id @default(autoincrement())
+  userId Int
+  user User @relation(fields: [userId], references: [id])
+  workspaceId Int
+  workspace Workspace @relation(fields: [workspaceId], references: [id])
+  role Role
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+enum Role {
+  ADMIN
+  MEMBER
 }
