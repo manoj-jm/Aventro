@@ -27,7 +27,20 @@ const Testimonials = () => {
               name: "Sarah Chen",
               title: "CTO, TechForward Inc.",
             },
-            
+            {
+              stars: 5,
+              quote:
+                "The collaboration tools in aventro are unmatched. Our remote team finally feels connected, and our project delivery time has decreased by 30% since implementation.",
+              name: "Marcus Johnson",
+              title: "Head of Product, Nexus Solutions",
+            },
+            {
+              stars: 4,
+              quote:
+                "Customer support is exceptional! When we had questions about custom integrations, the team went above and beyond to help us create a perfect workflow for our unique needs.",
+              name: "Aisha Patel",
+              title: "Operations Manager, GlobalWorks Ltd.",
+            },
           ].map((testimonial, i) => (
             <div
               key={i}
@@ -51,7 +64,21 @@ const Testimonials = () => {
                 <p className="text-sm text-gray-500 dark:text-slate-300 md:text-base">
                   &quot;{testimonial.quote}&quot;
                 </p>
-                
+                <div className="flex items-center gap-3 border-t border-slate-800 pt-3 md:gap-4 md:pt-4">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full dark:bg-slate-800 md:h-10 md:w-10">
+                    <span className="font-semibold text-blue-600">
+                      {testimonial.name.charAt(0)}
+                    </span>
+                  </div>
+                  <div>
+                    <div className="text-sm font-semibold text-white md:text-base">
+                      {testimonial.name}
+                    </div>
+                    <div className="text-xs dark:text-slate-400">
+                      {testimonial.title}
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           ))}
