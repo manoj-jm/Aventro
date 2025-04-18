@@ -1,13 +1,11 @@
-import { redirect } from "next/navigation";
-
-import { SignUpCard } from "@/components/sign-up-card";
-import { getServerSession } from "next-auth";
+import { SignUpCard } from "@/features/auth/components/sign-up-card";
+import { getCurrent } from "@/features/auth/getCurrUser";
 
 const SignUp = async () => {
-    const user = await getServerSession();
+  const user = await getCurrent();
     if (!user) return <SignUpCard />;
-
-    redirect("/");
+    
+    //TODO: Verify User
 };
 
 export default SignUp;
