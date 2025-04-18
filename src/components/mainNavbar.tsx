@@ -23,6 +23,7 @@ export function Navbar({ className }: { className?: string }) {
         <Link href="/" className="flex items-center">
           {/* <Logo className="dark:hidden" /> */}
           {/* <Logo2 className="hidden dark:block" /> */}
+          <h1 className="text-blue-600">Aventro</h1>
         </Link>
         <div className="flex items-center gap-x-4">
           <Button
