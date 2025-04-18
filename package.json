@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@hono/zod-validator": "^0.4.3",
     "@hookform/resolvers": "^5.0.1",
     "@prisma/client": "^6.5.0",
     "@radix-ui/react-label": "^2.1.3",

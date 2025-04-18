@@ -23,7 +23,7 @@ import { Input } from "@/components/ui/input";
 import { Eye, EyeOff } from "lucide-react";
 import { z } from "zod";
 
-export const SignUpCard = () => {
+export const SignInCard = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [isPending, setIsPending] = useState(false);
 
