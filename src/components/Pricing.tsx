@@ -38,29 +38,7 @@ const Pricing = () => {
                 "1 project",
               ],
             },
-            {
-              title: "Professional",
-              price: "$29",
-              description: "Ideal for growing teams with more complex needs.",
-              features: [
-                "Up to 20 users",
-                "Advanced analytics",
-                "Priority support",
-                "Unlimited projects",
-              ],
-            },
-            {
-              title: "Enterprise",
-              price: "$99",
-              description:
-                "For large organizations with advanced requirements.",
-              features: [
-                "Unlimited users",
-                "Custom analytics",
-                "24/7 support",
-                "Dedicated account manager",
-              ],
-            },
+            
           ].map((plan, i) => (
             <div
               key={i}
@@ -106,7 +84,7 @@ const Pricing = () => {
                 >
                   {selectedPlanIndex === i ? "Selected" : "Get Started"}
                 </Button>{" "}
-                {/* Fix the hove effect  in both dark and light mode*/}
+                {/* Fix the hove effect in both dark and light mode*/}
               </div>
             </div>
           ))}
