@@ -15,10 +15,7 @@ export default function BoldDesign() {
             <h2 className="text-2xl tracking-wide text-gray-500 dark:text-white md:text-3xl">
               Powerful tools for powerful teams
             </h2>
-            <p className="max-w-[900px] text-sm text-blue-500 md:text-base lg:text-base/relaxed xl:text-xl/relaxed">
-              aventro provides everything you need to take your project management
-              to the next level.
-            </p>
+            
           </div>
         </div>
         <div className="grid grid-cols-1 gap-4 py-8 sm:grid-cols-2 md:gap-6 md:py-12 lg:grid-cols-3">
