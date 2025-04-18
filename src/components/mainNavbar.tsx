@@ -30,7 +30,9 @@ export function Navbar({ className }: { className?: string }) {
             variant="outline"
             className="font-semibold text-blue-600 hover:text-blue-500"
           >
-            
+            <Link href={isSignIn ? "/sign-up" : "/sign-in"}>
+              {isSignIn ? "SignUp" : "SignIn"}
+            </Link>
           </Button>
           <ModeToggle />
         </div>
