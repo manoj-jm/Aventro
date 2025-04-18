@@ -1,7 +1,7 @@
 import { Hono } from "hono";
 import { ID } from "node-appwrite";
 import { zValidator } from "@hono/zod-validator";
-import { setCookie } from "hono/cookie";
+import { deleteCookie, setCookie } from "hono/cookie";
 
 import { createAdminClient } from "@/lib/appwrite";
 import { sessionMiddleware } from "@/lib/session-middleware";
@@ -12,7 +12,7 @@ import { loginSchema, registerSchema } from "../schemas";
 const app = new Hono()
   .get("/current", sessionMiddleware, async (c) => {
     const user = c.get("user");
-    
+
     return c.json({ data: user });
   })
   .post("/register", zValidator("json", registerSchema), async (c) => {
@@ -54,6 +54,12 @@ const app = new Hono()
     } catch (error) {
       return c.json({ error });
     }
+  })
+  .post("/logout", sessionMiddleware, async (c) => {
+    const account = c.get("account");
+    deleteCookie(c, AUTH_COOKIE);
+    await account.deleteSession("current");
+    return c.json({ success: true });
   })
 
 export default app;
