@@ -1,9 +1,8 @@
-import { Appbar } from "@/components/Appbar";
-
+import { Navbar } from "@/components/mainNavbar";
 export default function Home() {
   return (
-    <div className="">
-      <Appbar />
+    <div className="container mx-auto w-full">
+      <Navbar />
     </div>
   );
 }
