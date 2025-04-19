@@ -1,1 +1,1 @@
-export const AUTH_COOKIE = "session-vaiu";
+export const AUTH_COOKIE = "session-aventro";
