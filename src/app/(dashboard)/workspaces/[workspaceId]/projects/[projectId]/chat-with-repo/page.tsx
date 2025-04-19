@@ -15,7 +15,7 @@ export default function HomePage() {
   const router = useRouter();
 
   const projectId = useProjectId();
-  const { data: project, isLoading: projectsLoading } = useGetProject({
+  const { data: project } = useGetProject({
     projectId,
   });
 
@@ -48,7 +48,7 @@ export default function HomePage() {
       <Input
         placeholder="Enter GitHub repo URL"
         value={url}
-        onChange={(e: any) => setUrl(e.target.value)}
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) => setUrl(e.target.value)}
       />
 
       <Input
