@@ -19,6 +19,7 @@ Aventro is designed to empower individuals and teams by providing tools and reso
 - **Issue Tracking**.
 - **Audio/Video Rooms**.
 - **GitHub Integration**.
+- **Chat with Repository**.
 
 
 ## 🛠 Tech Stack
