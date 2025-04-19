@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
-// import { Logo } from "@/components/Logo";
-// import { Logo2 } from "@/components/Logo2";
+import { Logo } from "@/components/Logo";
+import { Logo2 } from "@/components/Logo2";
 
 const Footer = () => {
   return (
@@ -9,8 +9,8 @@ const Footer = () => {
       <div className="container mx-auto flex flex-col items-center justify-between gap-4 px-4 md:flex-row md:px-6">
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center">
-            {/* <Logo className="dark:hidden" /> */}
-            {/* <Logo2 className="hidden dark:block" /> */}
+            <Logo className="dark:hidden" />
+            <Logo2 className="hidden dark:block" />
           </Link>
         </div>
         <div className="flex flex-wrap gap-4 sm:gap-6">

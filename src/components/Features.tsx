@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { BarChart2, Clock, Users, Zap, ChevronRight } from "lucide-react";
 
-export default function BoldDesign() {
+export function Features() {
   return (
     <section className="w-full py-12 md:py-40" id="features">
       <div className="container px-4 md:px-6">
