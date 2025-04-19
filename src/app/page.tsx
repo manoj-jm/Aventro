@@ -1,23 +1,26 @@
-import { SignInCard } from "@/features/auth/components/sign-in-card";
-import { getCurrent } from "@/features/auth/getCurrUser";
-import { getWorkspaces } from "@/features/workspaces/queries";
 import { redirect } from "next/navigation";
+import { getCurrent } from "@/features/auth/queries";
+
+import Hero from "@/components/Hero";
+import { getWorkspaces } from "@/features/workspaces/queries";
+import { Navbar } from "@/components/mainNavbar";
 
 export default async function Home() {
   const current = await getCurrent();
-  const workspaces = await getWorkspaces();
-  console.log("workspaces", workspaces);
 
   if (!current) {
     return (
       <div className="container mx-auto w-full">
-        <SignInCard />
+        <Navbar />
+        <Hero />
       </div>
     );
   }
-  if (workspaces.documents.length === 0 && current) {
-    redirect("/workspaces/create");
-  }
 
-  return <div className="container mx-auto w-full">Hey There!</div>;
+  const workspaces = await getWorkspaces();
+  if (workspaces?.total === 0) {
+    return redirect("/workspaces/create");
+  } else {
+    return redirect(`/workspaces/${workspaces?.documents[0]?.$id}`);
+  }
 }
