@@ -13,9 +13,9 @@ import { Analytics } from "@vercel/analytics/react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Vaiu",
+  title: "Aventro",
   description:
-    "Plan, track, and manage your agile and software development projects in vaiu. Customize your workflow, collaborate, and release great software",
+    "Plan, track, and manage your agile and software development projects in aventro. Customize your workflow, collaborate, and release great software",
   icons: {
     icon: "/favicon.svg",
   },
