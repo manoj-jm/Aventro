@@ -25,27 +25,27 @@ export function Features() {
           {[
             {
               icon: <BarChart2 className="h-8 w-8 md:h-10 md:w-10" />,
-              title: "Advanced Analytics",
+              title: "Workspace Management",
               description:
-                "Gain deep insights into your team's performance with customizable dashboards and real-time metrics.",
+                "Manage multiple workspaces and projects seamlessly with a user-friendly interface.",
             },
             {
               icon: <Clock className="h-8 w-8 md:h-10 md:w-10" />,
-              title: "Time Tracking",
+              title: "Issue Tracking",
               description:
-                "Track time spent on tasks and projects to improve estimation accuracy and resource allocation.",
+                "Track and manage issues efficiently with customizable workflows and statuses with Kanban board or calendar views.",
             },
             {
               icon: <Users className="h-8 w-8 md:h-10 md:w-10" />,
               title: "Team Collaboration",
               description:
-                "Enhance team communication with integrated chat, comments, and file sharing capabilities.",
+                "Enhance team communication with integrated autdio and video conferencing capabilities.",
             },
             {
               icon: <Zap className="h-8 w-8 md:h-10 md:w-10" />,
-              title: "Automation",
+              title: "Github Integration",
               description:
-                "Automate repetitive tasks and workflows to save time and reduce manual errors.",
+                "Seamlessly integrate with GitHub to manage code repositories and pull requests directly within aventro.",
             },
             {
               icon: (
@@ -65,9 +65,9 @@ export function Features() {
                   <path d="M9 9h6v6H9z" />
                 </svg>
               ),
-              title: "Custom Fields",
+              title: "Chat with Repository",
               description:
-                "Create and manage custom fields to tailor aventro to your specific project requirements.",
+                "Leverage AI to chat with your code repository, making it easier to understand and navigate complex codebases.",
             },
             {
               icon: (
@@ -87,9 +87,9 @@ export function Features() {
                   <path d="M12 8v4l3 3" />
                 </svg>
               ),
-              title: "Reporting",
+              title: "Project Management",
               description:
-                "Generate comprehensive reports to track progress, identify bottlenecks, and make data-driven decisions.",
+                "Manage your projects with advanced features like task assignments, deadlines, and progress tracking.",
             },
           ].map((feature, i) => (
             <div

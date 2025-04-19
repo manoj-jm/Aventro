@@ -23,6 +23,9 @@ export const useVerifyUser = () => {
     mutationFn: async ({ json }) => {
       const response = await client.api.v1.auth["verify-user"].$post({ json });
 
+      console.log("Response", response);
+      
+
       if (!response.ok) {
         const error = await response.json();
         throw new Error(error.message || "Failed to verify user");
