@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { Providers } from "./providers";
+import { QueryProvider } from "@/components/query-provider";
 import { Toaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "./theme-provider";
 import Footer from "@/components/Footer";
@@ -38,9 +38,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-        <Toaster richColors theme="dark"/>
-        <Providers>{children}</Providers>
+        <Toaster richColors theme='dark'/>
+        <QueryProvider>
+          {children}
           <Footer />
+        </QueryProvider>
         </ThemeProvider>
       </body>
     </html>

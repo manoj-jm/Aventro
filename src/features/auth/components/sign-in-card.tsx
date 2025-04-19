@@ -3,15 +3,11 @@ import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
-
+import { Eye, EyeOff } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { DottedSeparator } from "@/components/dotted-separator";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
 import {
   Form,
   FormControl,
@@ -19,27 +15,25 @@ import {
   FormItem,
   FormMessage,
 } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Eye, EyeOff } from "lucide-react";
-import { z } from "zod";
 
-export const SignUpCard = () => {
-  const [showPassword, setShowPassword] = useState(false);
-  const [isPending, setIsPending] = useState(false);
+import { type LoginSchema, loginSchema } from "../schemas";
+import { useLogin } from "../api/use-login";
 
-  const form = useForm({
-    resolver: zodResolver(
-      z.object({
-        email: z.string().email(),
-        password: z.string().min(8),
-      }),
-    )
+export const SignInCard = () => {
+  const { mutate, isPending } = useLogin();
+
+  const form = useForm<LoginSchema>({
+    resolver: zodResolver(loginSchema),
+    defaultValues: {
+      email: "",
+      password: "",
+    },
   });
 
-  const onSubmit = async (data: any) => {
-    setIsPending(true);
-    // Todo: Signin
-    setIsPending(false);
+  const [showPassword, setShowPassword] = useState(false);
+
+  const onSubmit = (values: LoginSchema) => {
+    mutate({ json: values });
   };
 
   return (
