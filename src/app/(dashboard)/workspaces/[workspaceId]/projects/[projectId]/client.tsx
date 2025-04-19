@@ -13,7 +13,7 @@ import { TaskViewSwitcher } from "@/features/tasks/components/task-view-switcher
 import { Button } from "@/components/ui/button";
 import { useProjectId } from "@/features/projects/hooks/use-projectId";
 import { useGetProject } from "@/features/projects/api/use-get-project";
-import { Loader }  from "@/components/page-loader";
+import { Loader } from "@/components/page-loader";
 import { PageError } from "@/components/page-error";
 import { useGetProjectAnalytics } from "@/features/projects/api/use-get-project-analytics";
 import { Analytics } from "@/components/analytics";
@@ -42,6 +42,7 @@ export const ProjectIdClient = () => {
       toast.error("You have to push to the specified branch first.");
     }
   };
+
   const { openPr } = useCreatePrModal();
 
   const { open } = useAddCollaboratorToProjectModal();
@@ -79,6 +80,12 @@ export const ProjectIdClient = () => {
               <UserPlus2 className="size-4" />
               Add Collaborator
             </Button>
+            <Link href={`/workspaces/${project.workspaceId}/projects/${project.$id}/chat-with-repo`}>
+              <Button variant={"outline"} size={"sm"}>
+                <UserPlus2 className="size-4" />
+                Chat with Repository
+              </Button>
+            </Link>
             <Button
               className="bg-slate-200 hover:bg-slate-300 text-black"
               variant={"default"}
