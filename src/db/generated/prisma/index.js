@@ -145,10 +145,6 @@ const config = {
       },
       {
         "fromEnvVar": null,
-        "value": "windows"
-      },
-      {
-        "fromEnvVar": null,
         "value": "rhel-openssl-3.0.x"
       }
     ],
@@ -177,8 +173,8 @@ const config = {
       }
     }
   },
-  "inlineSchema": "// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\n// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?\n// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init\n\ngenerator client {\n  provider        = \"prisma-client-js\"\n  output          = \"../generated/prisma\"\n  previewFeatures = [\"postgresqlExtensions\"]\n  binaryTargets   = [\"native\", \"windows\", \"rhel-openssl-3.0.x\"]\n}\n\ndatasource db {\n  provider   = \"postgresql\"\n  url        = env(\"DATABASE_URL\")\n  extensions = [vector]\n}\n\nmodel Repository {\n  id        String    @id @default(cuid())\n  name      String\n  url       String\n  contexts  Context[]\n  createdAt DateTime  @default(now())\n}\n\nmodel Context {\n  id         String     @id @default(cuid())\n  content    String\n  filePath   String\n  repoId     String\n  repository Repository @relation(fields: [repoId], references: [id])\n  createdAt  DateTime   @default(now())\n}\n",
-  "inlineSchemaHash": "0c36048774e38a0b1f6488d5c412e6b815bbfc982c1afc9f18e6083275856e76",
+  "inlineSchema": "// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\n// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?\n// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init\n\ngenerator client {\n  provider        = \"prisma-client-js\"\n  output          = \"../generated/prisma\"\n  previewFeatures = [\"postgresqlExtensions\"]\n  binaryTargets   = [\"native\", \"rhel-openssl-3.0.x\"]\n}\n\ndatasource db {\n  provider   = \"postgresql\"\n  url        = env(\"DATABASE_URL\")\n  extensions = [vector]\n}\n\nmodel Repository {\n  id        String    @id @default(cuid())\n  name      String\n  url       String\n  contexts  Context[]\n  createdAt DateTime  @default(now())\n}\n\nmodel Context {\n  id         String     @id @default(cuid())\n  content    String\n  filePath   String\n  repoId     String\n  repository Repository @relation(fields: [repoId], references: [id])\n  createdAt  DateTime   @default(now())\n}\n",
+  "inlineSchemaHash": "6ed8de711370990770deb0fe5321fb0784f20b109f4700215dc727d81447982f",
   "copyEngine": true
 }
 
