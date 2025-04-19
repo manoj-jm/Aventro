@@ -18,18 +18,18 @@ datasource db {
 }
 
 model Repository {
-  id          String   @id @default(uuid())
-  url         String   @unique
-  name        String
-  description String
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  id        String    @id @default(cuid())
+  name      String
+  url       String
+  contexts  Context[]
+  createdAt DateTime  @default(now())
 }
 
-model SourceCodeEmbedding {
-  id               String                      @id @default(uuid())
-  summaryEmbedding Unsupported("vector(768)")?
-  sourceCode       String
-  fileName         String
-  summary          String
+model Context {
+  id         String     @id @default(cuid())
+  content    String
+  filePath   String
+  repoId     String
+  repository Repository @relation(fields: [repoId], references: [id])
+  createdAt  DateTime   @default(now())
 }

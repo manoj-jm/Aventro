@@ -119,18 +119,17 @@ exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
 
 exports.Prisma.RepositoryScalarFieldEnum = {
   id: 'id',
-  url: 'url',
   name: 'name',
-  description: 'description',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
+  url: 'url',
+  createdAt: 'createdAt'
 };
 
-exports.Prisma.SourceCodeEmbeddingScalarFieldEnum = {
+exports.Prisma.ContextScalarFieldEnum = {
   id: 'id',
-  sourceCode: 'sourceCode',
-  fileName: 'fileName',
-  summary: 'summary'
+  content: 'content',
+  filePath: 'filePath',
+  repoId: 'repoId',
+  createdAt: 'createdAt'
 };
 
 exports.Prisma.SortOrder = {
@@ -146,7 +145,7 @@ exports.Prisma.QueryMode = {
 
 exports.Prisma.ModelName = {
   Repository: 'Repository',
-  SourceCodeEmbedding: 'SourceCodeEmbedding'
+  Context: 'Context'
 };
 
 /**

@@ -120,6 +120,10 @@ export const ProjectIdClient = () => {
                   <UserPlus2 className="size-4" />
                   Add Collaborator
                 </Button>
+                <Button className="w-full" variant={"outline"} onClick={open}>
+                  <UserPlus2 className="size-4" />
+                  Add Collaborator
+                </Button>
                 <Button
                   className="w-full bg-slate-200 hover:bg-slate-300 text-black"
                   variant={"default"}

@@ -19,10 +19,10 @@ export type PrismaPromise<T> = $Public.PrismaPromise<T>
  */
 export type Repository = $Result.DefaultSelection<Prisma.$RepositoryPayload>
 /**
- * Model SourceCodeEmbedding
+ * Model Context
  * 
  */
-export type SourceCodeEmbedding = $Result.DefaultSelection<Prisma.$SourceCodeEmbeddingPayload>
+export type Context = $Result.DefaultSelection<Prisma.$ContextPayload>
 
 /**
  * ##  Prisma Client ʲˢ
@@ -160,14 +160,14 @@ export class PrismaClient<
   get repository(): Prisma.RepositoryDelegate<ExtArgs, ClientOptions>;
 
   /**
-   * `prisma.sourceCodeEmbedding`: Exposes CRUD operations for the **SourceCodeEmbedding** model.
+   * `prisma.context`: Exposes CRUD operations for the **Context** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more SourceCodeEmbeddings
-    * const sourceCodeEmbeddings = await prisma.sourceCodeEmbedding.findMany()
+    * // Fetch zero or more Contexts
+    * const contexts = await prisma.context.findMany()
     * ```
     */
-  get sourceCodeEmbedding(): Prisma.SourceCodeEmbeddingDelegate<ExtArgs, ClientOptions>;
+  get context(): Prisma.ContextDelegate<ExtArgs, ClientOptions>;
 }
 
 export namespace Prisma {
@@ -609,7 +609,7 @@ export namespace Prisma {
 
   export const ModelName: {
     Repository: 'Repository',
-    SourceCodeEmbedding: 'SourceCodeEmbedding'
+    Context: 'Context'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -628,7 +628,7 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "repository" | "sourceCodeEmbedding"
+      modelProps: "repository" | "context"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
@@ -706,77 +706,77 @@ export namespace Prisma {
           }
         }
       }
-      SourceCodeEmbedding: {
-        payload: Prisma.$SourceCodeEmbeddingPayload<ExtArgs>
-        fields: Prisma.SourceCodeEmbeddingFieldRefs
+      Context: {
+        payload: Prisma.$ContextPayload<ExtArgs>
+        fields: Prisma.ContextFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.SourceCodeEmbeddingFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$SourceCodeEmbeddingPayload> | null
+            args: Prisma.ContextFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContextPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.SourceCodeEmbeddingFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$SourceCodeEmbeddingPayload>
+            args: Prisma.ContextFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContextPayload>
           }
           findFirst: {
-            args: Prisma.SourceCodeEmbeddingFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$SourceCodeEmbeddingPayload> | null
+            args: Prisma.ContextFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContextPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.SourceCodeEmbeddingFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$SourceCodeEmbeddingPayload>
+            args: Prisma.ContextFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContextPayload>
           }
           findMany: {
-            args: Prisma.SourceCodeEmbeddingFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$SourceCodeEmbeddingPayload>[]
+            args: Prisma.ContextFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContextPayload>[]
           }
           create: {
-            args: Prisma.SourceCodeEmbeddingCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$SourceCodeEmbeddingPayload>
+            args: Prisma.ContextCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContextPayload>
           }
           createMany: {
-            args: Prisma.SourceCodeEmbeddingCreateManyArgs<ExtArgs>
+            args: Prisma.ContextCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.SourceCodeEmbeddingCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$SourceCodeEmbeddingPayload>[]
+            args: Prisma.ContextCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContextPayload>[]
           }
           delete: {
-            args: Prisma.SourceCodeEmbeddingDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$SourceCodeEmbeddingPayload>
+            args: Prisma.ContextDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContextPayload>
           }
           update: {
-            args: Prisma.SourceCodeEmbeddingUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$SourceCodeEmbeddingPayload>
+            args: Prisma.ContextUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContextPayload>
           }
           deleteMany: {
-            args: Prisma.SourceCodeEmbeddingDeleteManyArgs<ExtArgs>
+            args: Prisma.ContextDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.SourceCodeEmbeddingUpdateManyArgs<ExtArgs>
+            args: Prisma.ContextUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.SourceCodeEmbeddingUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$SourceCodeEmbeddingPayload>[]
+            args: Prisma.ContextUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContextPayload>[]
           }
           upsert: {
-            args: Prisma.SourceCodeEmbeddingUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$SourceCodeEmbeddingPayload>
+            args: Prisma.ContextUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContextPayload>
           }
           aggregate: {
-            args: Prisma.SourceCodeEmbeddingAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregateSourceCodeEmbedding>
+            args: Prisma.ContextAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateContext>
           }
           groupBy: {
-            args: Prisma.SourceCodeEmbeddingGroupByArgs<ExtArgs>
-            result: $Utils.Optional<SourceCodeEmbeddingGroupByOutputType>[]
+            args: Prisma.ContextGroupByArgs<ExtArgs>
+            result: $Utils.Optional<ContextGroupByOutputType>[]
           }
           count: {
-            args: Prisma.SourceCodeEmbeddingCountArgs<ExtArgs>
-            result: $Utils.Optional<SourceCodeEmbeddingCountAggregateOutputType> | number
+            args: Prisma.ContextCountArgs<ExtArgs>
+            result: $Utils.Optional<ContextCountAggregateOutputType> | number
           }
         }
       }
@@ -865,7 +865,7 @@ export namespace Prisma {
   }
   export type GlobalOmitConfig = {
     repository?: RepositoryOmit
-    sourceCodeEmbedding?: SourceCodeEmbeddingOmit
+    context?: ContextOmit
   }
 
   /* Types for Logging */
@@ -955,6 +955,36 @@ export namespace Prisma {
    */
 
 
+  /**
+   * Count Type RepositoryCountOutputType
+   */
+
+  export type RepositoryCountOutputType = {
+    contexts: number
+  }
+
+  export type RepositoryCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    contexts?: boolean | RepositoryCountOutputTypeCountContextsArgs
+  }
+
+  // Custom InputTypes
+  /**
+   * RepositoryCountOutputType without action
+   */
+  export type RepositoryCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the RepositoryCountOutputType
+     */
+    select?: RepositoryCountOutputTypeSelect<ExtArgs> | null
+  }
+
+  /**
+   * RepositoryCountOutputType without action
+   */
+  export type RepositoryCountOutputTypeCountContextsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ContextWhereInput
+  }
+
 
   /**
    * Models
@@ -972,58 +1002,46 @@ export namespace Prisma {
 
   export type RepositoryMinAggregateOutputType = {
     id: string | null
-    url: string | null
     name: string | null
-    description: string | null
+    url: string | null
     createdAt: Date | null
-    updatedAt: Date | null
   }
 
   export type RepositoryMaxAggregateOutputType = {
     id: string | null
-    url: string | null
     name: string | null
-    description: string | null
+    url: string | null
     createdAt: Date | null
-    updatedAt: Date | null
   }
 
   export type RepositoryCountAggregateOutputType = {
     id: number
-    url: number
     name: number
-    description: number
+    url: number
     createdAt: number
-    updatedAt: number
     _all: number
   }
 
 
   export type RepositoryMinAggregateInputType = {
     id?: true
-    url?: true
     name?: true
-    description?: true
+    url?: true
     createdAt?: true
-    updatedAt?: true
   }
 
   export type RepositoryMaxAggregateInputType = {
     id?: true
-    url?: true
     name?: true
-    description?: true
+    url?: true
     createdAt?: true
-    updatedAt?: true
   }
 
   export type RepositoryCountAggregateInputType = {
     id?: true
-    url?: true
     name?: true
-    description?: true
+    url?: true
     createdAt?: true
-    updatedAt?: true
     _all?: true
   }
 
@@ -1101,11 +1119,9 @@ export namespace Prisma {
 
   export type RepositoryGroupByOutputType = {
     id: string
-    url: string
     name: string
-    description: string
+    url: string
     createdAt: Date
-    updatedAt: Date
     _count: RepositoryCountAggregateOutputType | null
     _min: RepositoryMinAggregateOutputType | null
     _max: RepositoryMaxAggregateOutputType | null
@@ -1127,52 +1143,52 @@ export namespace Prisma {
 
   export type RepositorySelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    url?: boolean
     name?: boolean
-    description?: boolean
+    url?: boolean
     createdAt?: boolean
-    updatedAt?: boolean
+    contexts?: boolean | Repository$contextsArgs<ExtArgs>
+    _count?: boolean | RepositoryCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["repository"]>
 
   export type RepositorySelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    url?: boolean
     name?: boolean
-    description?: boolean
+    url?: boolean
     createdAt?: boolean
-    updatedAt?: boolean
   }, ExtArgs["result"]["repository"]>
 
   export type RepositorySelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    url?: boolean
     name?: boolean
-    description?: boolean
+    url?: boolean
     createdAt?: boolean
-    updatedAt?: boolean
   }, ExtArgs["result"]["repository"]>
 
   export type RepositorySelectScalar = {
     id?: boolean
-    url?: boolean
     name?: boolean
-    description?: boolean
+    url?: boolean
     createdAt?: boolean
-    updatedAt?: boolean
   }
 
-  export type RepositoryOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "url" | "name" | "description" | "createdAt" | "updatedAt", ExtArgs["result"]["repository"]>
+  export type RepositoryOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "url" | "createdAt", ExtArgs["result"]["repository"]>
+  export type RepositoryInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    contexts?: boolean | Repository$contextsArgs<ExtArgs>
+    _count?: boolean | RepositoryCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type RepositoryIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+  export type RepositoryIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
 
   export type $RepositoryPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Repository"
-    objects: {}
+    objects: {
+      contexts: Prisma.$ContextPayload<ExtArgs>[]
+    }
     scalars: $Extensions.GetPayloadResult<{
       id: string
-      url: string
       name: string
-      description: string
+      url: string
       createdAt: Date
-      updatedAt: Date
     }, ExtArgs["result"]["repository"]>
     composites: {}
   }
@@ -1567,6 +1583,7 @@ export namespace Prisma {
    */
   export interface Prisma__RepositoryClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
+    contexts<T extends Repository$contextsArgs<ExtArgs> = {}>(args?: Subset<T, Repository$contextsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ContextPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -1597,11 +1614,9 @@ export namespace Prisma {
    */ 
   interface RepositoryFieldRefs {
     readonly id: FieldRef<"Repository", 'String'>
-    readonly url: FieldRef<"Repository", 'String'>
     readonly name: FieldRef<"Repository", 'String'>
-    readonly description: FieldRef<"Repository", 'String'>
+    readonly url: FieldRef<"Repository", 'String'>
     readonly createdAt: FieldRef<"Repository", 'DateTime'>
-    readonly updatedAt: FieldRef<"Repository", 'DateTime'>
   }
     
 
@@ -1618,6 +1633,10 @@ export namespace Prisma {
      * Omit specific fields from the Repository
      */
     omit?: RepositoryOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: RepositoryInclude<ExtArgs> | null
     /**
      * Filter, which Repository to fetch.
      */
@@ -1637,6 +1656,10 @@ export namespace Prisma {
      */
     omit?: RepositoryOmit<ExtArgs> | null
     /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: RepositoryInclude<ExtArgs> | null
+    /**
      * Filter, which Repository to fetch.
      */
     where: RepositoryWhereUniqueInput
@@ -1654,6 +1677,10 @@ export namespace Prisma {
      * Omit specific fields from the Repository
      */
     omit?: RepositoryOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: RepositoryInclude<ExtArgs> | null
     /**
      * Filter, which Repository to fetch.
      */
@@ -1703,6 +1730,10 @@ export namespace Prisma {
      */
     omit?: RepositoryOmit<ExtArgs> | null
     /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: RepositoryInclude<ExtArgs> | null
+    /**
      * Filter, which Repository to fetch.
      */
     where?: RepositoryWhereInput
@@ -1751,6 +1782,10 @@ export namespace Prisma {
      */
     omit?: RepositoryOmit<ExtArgs> | null
     /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: RepositoryInclude<ExtArgs> | null
+    /**
      * Filter, which Repositories to fetch.
      */
     where?: RepositoryWhereInput
@@ -1793,6 +1828,10 @@ export namespace Prisma {
      * Omit specific fields from the Repository
      */
     omit?: RepositoryOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: RepositoryInclude<ExtArgs> | null
     /**
      * The data needed to create a Repository.
      */
@@ -1841,6 +1880,10 @@ export namespace Prisma {
      * Omit specific fields from the Repository
      */
     omit?: RepositoryOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: RepositoryInclude<ExtArgs> | null
     /**
      * The data needed to update a Repository.
      */
@@ -1908,6 +1951,10 @@ export namespace Prisma {
      */
     omit?: RepositoryOmit<ExtArgs> | null
     /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: RepositoryInclude<ExtArgs> | null
+    /**
      * The filter to search for the Repository to update in case it exists.
      */
     where: RepositoryWhereUniqueInput
@@ -1934,6 +1981,10 @@ export namespace Prisma {
      */
     omit?: RepositoryOmit<ExtArgs> | null
     /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: RepositoryInclude<ExtArgs> | null
+    /**
      * Filter which Repository to delete.
      */
     where: RepositoryWhereUniqueInput
@@ -1954,6 +2005,30 @@ export namespace Prisma {
   }
 
   /**
+   * Repository.contexts
+   */
+  export type Repository$contextsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Context
+     */
+    select?: ContextSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Context
+     */
+    omit?: ContextOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContextInclude<ExtArgs> | null
+    where?: ContextWhereInput
+    orderBy?: ContextOrderByWithRelationInput | ContextOrderByWithRelationInput[]
+    cursor?: ContextWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: ContextScalarFieldEnum | ContextScalarFieldEnum[]
+  }
+
+  /**
    * Repository without action
    */
   export type RepositoryDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -1965,328 +2040,358 @@ export namespace Prisma {
      * Omit specific fields from the Repository
      */
     omit?: RepositoryOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: RepositoryInclude<ExtArgs> | null
   }
 
 
   /**
-   * Model SourceCodeEmbedding
+   * Model Context
    */
 
-  export type AggregateSourceCodeEmbedding = {
-    _count: SourceCodeEmbeddingCountAggregateOutputType | null
-    _min: SourceCodeEmbeddingMinAggregateOutputType | null
-    _max: SourceCodeEmbeddingMaxAggregateOutputType | null
+  export type AggregateContext = {
+    _count: ContextCountAggregateOutputType | null
+    _min: ContextMinAggregateOutputType | null
+    _max: ContextMaxAggregateOutputType | null
   }
 
-  export type SourceCodeEmbeddingMinAggregateOutputType = {
+  export type ContextMinAggregateOutputType = {
     id: string | null
-    sourceCode: string | null
-    fileName: string | null
-    summary: string | null
+    content: string | null
+    filePath: string | null
+    repoId: string | null
+    createdAt: Date | null
   }
 
-  export type SourceCodeEmbeddingMaxAggregateOutputType = {
+  export type ContextMaxAggregateOutputType = {
     id: string | null
-    sourceCode: string | null
-    fileName: string | null
-    summary: string | null
+    content: string | null
+    filePath: string | null
+    repoId: string | null
+    createdAt: Date | null
   }
 
-  export type SourceCodeEmbeddingCountAggregateOutputType = {
+  export type ContextCountAggregateOutputType = {
     id: number
-    sourceCode: number
-    fileName: number
-    summary: number
+    content: number
+    filePath: number
+    repoId: number
+    createdAt: number
     _all: number
   }
 
 
-  export type SourceCodeEmbeddingMinAggregateInputType = {
+  export type ContextMinAggregateInputType = {
     id?: true
-    sourceCode?: true
-    fileName?: true
-    summary?: true
+    content?: true
+    filePath?: true
+    repoId?: true
+    createdAt?: true
   }
 
-  export type SourceCodeEmbeddingMaxAggregateInputType = {
+  export type ContextMaxAggregateInputType = {
     id?: true
-    sourceCode?: true
-    fileName?: true
-    summary?: true
+    content?: true
+    filePath?: true
+    repoId?: true
+    createdAt?: true
   }
 
-  export type SourceCodeEmbeddingCountAggregateInputType = {
+  export type ContextCountAggregateInputType = {
     id?: true
-    sourceCode?: true
-    fileName?: true
-    summary?: true
+    content?: true
+    filePath?: true
+    repoId?: true
+    createdAt?: true
     _all?: true
   }
 
-  export type SourceCodeEmbeddingAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ContextAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which SourceCodeEmbedding to aggregate.
+     * Filter which Context to aggregate.
      */
-    where?: SourceCodeEmbeddingWhereInput
+    where?: ContextWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of SourceCodeEmbeddings to fetch.
+     * Determine the order of Contexts to fetch.
      */
-    orderBy?: SourceCodeEmbeddingOrderByWithRelationInput | SourceCodeEmbeddingOrderByWithRelationInput[]
+    orderBy?: ContextOrderByWithRelationInput | ContextOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: SourceCodeEmbeddingWhereUniqueInput
+    cursor?: ContextWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` SourceCodeEmbeddings from the position of the cursor.
+     * Take `±n` Contexts from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` SourceCodeEmbeddings.
+     * Skip the first `n` Contexts.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned SourceCodeEmbeddings
+     * Count returned Contexts
     **/
-    _count?: true | SourceCodeEmbeddingCountAggregateInputType
+    _count?: true | ContextCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: SourceCodeEmbeddingMinAggregateInputType
+    _min?: ContextMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: SourceCodeEmbeddingMaxAggregateInputType
+    _max?: ContextMaxAggregateInputType
   }
 
-  export type GetSourceCodeEmbeddingAggregateType<T extends SourceCodeEmbeddingAggregateArgs> = {
-        [P in keyof T & keyof AggregateSourceCodeEmbedding]: P extends '_count' | 'count'
+  export type GetContextAggregateType<T extends ContextAggregateArgs> = {
+        [P in keyof T & keyof AggregateContext]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateSourceCodeEmbedding[P]>
-      : GetScalarType<T[P], AggregateSourceCodeEmbedding[P]>
+        : GetScalarType<T[P], AggregateContext[P]>
+      : GetScalarType<T[P], AggregateContext[P]>
   }
 
 
 
 
-  export type SourceCodeEmbeddingGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: SourceCodeEmbeddingWhereInput
-    orderBy?: SourceCodeEmbeddingOrderByWithAggregationInput | SourceCodeEmbeddingOrderByWithAggregationInput[]
-    by: SourceCodeEmbeddingScalarFieldEnum[] | SourceCodeEmbeddingScalarFieldEnum
-    having?: SourceCodeEmbeddingScalarWhereWithAggregatesInput
+  export type ContextGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ContextWhereInput
+    orderBy?: ContextOrderByWithAggregationInput | ContextOrderByWithAggregationInput[]
+    by: ContextScalarFieldEnum[] | ContextScalarFieldEnum
+    having?: ContextScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: SourceCodeEmbeddingCountAggregateInputType | true
-    _min?: SourceCodeEmbeddingMinAggregateInputType
-    _max?: SourceCodeEmbeddingMaxAggregateInputType
+    _count?: ContextCountAggregateInputType | true
+    _min?: ContextMinAggregateInputType
+    _max?: ContextMaxAggregateInputType
   }
 
-  export type SourceCodeEmbeddingGroupByOutputType = {
+  export type ContextGroupByOutputType = {
     id: string
-    sourceCode: string
-    fileName: string
-    summary: string
-    _count: SourceCodeEmbeddingCountAggregateOutputType | null
-    _min: SourceCodeEmbeddingMinAggregateOutputType | null
-    _max: SourceCodeEmbeddingMaxAggregateOutputType | null
+    content: string
+    filePath: string
+    repoId: string
+    createdAt: Date
+    _count: ContextCountAggregateOutputType | null
+    _min: ContextMinAggregateOutputType | null
+    _max: ContextMaxAggregateOutputType | null
   }
 
-  type GetSourceCodeEmbeddingGroupByPayload<T extends SourceCodeEmbeddingGroupByArgs> = Prisma.PrismaPromise<
+  type GetContextGroupByPayload<T extends ContextGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<SourceCodeEmbeddingGroupByOutputType, T['by']> &
+      PickEnumerable<ContextGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof SourceCodeEmbeddingGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof ContextGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], SourceCodeEmbeddingGroupByOutputType[P]>
-            : GetScalarType<T[P], SourceCodeEmbeddingGroupByOutputType[P]>
+              : GetScalarType<T[P], ContextGroupByOutputType[P]>
+            : GetScalarType<T[P], ContextGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type SourceCodeEmbeddingSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type ContextSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    sourceCode?: boolean
-    fileName?: boolean
-    summary?: boolean
-  }, ExtArgs["result"]["sourceCodeEmbedding"]>
+    content?: boolean
+    filePath?: boolean
+    repoId?: boolean
+    createdAt?: boolean
+    repository?: boolean | RepositoryDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["context"]>
 
-  export type SourceCodeEmbeddingSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type ContextSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    sourceCode?: boolean
-    fileName?: boolean
-    summary?: boolean
-  }, ExtArgs["result"]["sourceCodeEmbedding"]>
+    content?: boolean
+    filePath?: boolean
+    repoId?: boolean
+    createdAt?: boolean
+    repository?: boolean | RepositoryDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["context"]>
 
-  export type SourceCodeEmbeddingSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type ContextSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    sourceCode?: boolean
-    fileName?: boolean
-    summary?: boolean
-  }, ExtArgs["result"]["sourceCodeEmbedding"]>
+    content?: boolean
+    filePath?: boolean
+    repoId?: boolean
+    createdAt?: boolean
+    repository?: boolean | RepositoryDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["context"]>
 
-  export type SourceCodeEmbeddingSelectScalar = {
+  export type ContextSelectScalar = {
     id?: boolean
-    sourceCode?: boolean
-    fileName?: boolean
-    summary?: boolean
+    content?: boolean
+    filePath?: boolean
+    repoId?: boolean
+    createdAt?: boolean
   }
 
-  export type SourceCodeEmbeddingOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "sourceCode" | "fileName" | "summary", ExtArgs["result"]["sourceCodeEmbedding"]>
+  export type ContextOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "content" | "filePath" | "repoId" | "createdAt", ExtArgs["result"]["context"]>
+  export type ContextInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    repository?: boolean | RepositoryDefaultArgs<ExtArgs>
+  }
+  export type ContextIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    repository?: boolean | RepositoryDefaultArgs<ExtArgs>
+  }
+  export type ContextIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    repository?: boolean | RepositoryDefaultArgs<ExtArgs>
+  }
 
-  export type $SourceCodeEmbeddingPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "SourceCodeEmbedding"
-    objects: {}
+  export type $ContextPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "Context"
+    objects: {
+      repository: Prisma.$RepositoryPayload<ExtArgs>
+    }
     scalars: $Extensions.GetPayloadResult<{
       id: string
-      sourceCode: string
-      fileName: string
-      summary: string
-    }, ExtArgs["result"]["sourceCodeEmbedding"]>
+      content: string
+      filePath: string
+      repoId: string
+      createdAt: Date
+    }, ExtArgs["result"]["context"]>
     composites: {}
   }
 
-  type SourceCodeEmbeddingGetPayload<S extends boolean | null | undefined | SourceCodeEmbeddingDefaultArgs> = $Result.GetResult<Prisma.$SourceCodeEmbeddingPayload, S>
+  type ContextGetPayload<S extends boolean | null | undefined | ContextDefaultArgs> = $Result.GetResult<Prisma.$ContextPayload, S>
 
-  type SourceCodeEmbeddingCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<SourceCodeEmbeddingFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: SourceCodeEmbeddingCountAggregateInputType | true
+  type ContextCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<ContextFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: ContextCountAggregateInputType | true
     }
 
-  export interface SourceCodeEmbeddingDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['SourceCodeEmbedding'], meta: { name: 'SourceCodeEmbedding' } }
+  export interface ContextDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Context'], meta: { name: 'Context' } }
     /**
-     * Find zero or one SourceCodeEmbedding that matches the filter.
-     * @param {SourceCodeEmbeddingFindUniqueArgs} args - Arguments to find a SourceCodeEmbedding
+     * Find zero or one Context that matches the filter.
+     * @param {ContextFindUniqueArgs} args - Arguments to find a Context
      * @example
-     * // Get one SourceCodeEmbedding
-     * const sourceCodeEmbedding = await prisma.sourceCodeEmbedding.findUnique({
+     * // Get one Context
+     * const context = await prisma.context.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends SourceCodeEmbeddingFindUniqueArgs>(args: SelectSubset<T, SourceCodeEmbeddingFindUniqueArgs<ExtArgs>>): Prisma__SourceCodeEmbeddingClient<$Result.GetResult<Prisma.$SourceCodeEmbeddingPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends ContextFindUniqueArgs>(args: SelectSubset<T, ContextFindUniqueArgs<ExtArgs>>): Prisma__ContextClient<$Result.GetResult<Prisma.$ContextPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find one SourceCodeEmbedding that matches the filter or throw an error with `error.code='P2025'`
+     * Find one Context that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {SourceCodeEmbeddingFindUniqueOrThrowArgs} args - Arguments to find a SourceCodeEmbedding
+     * @param {ContextFindUniqueOrThrowArgs} args - Arguments to find a Context
      * @example
-     * // Get one SourceCodeEmbedding
-     * const sourceCodeEmbedding = await prisma.sourceCodeEmbedding.findUniqueOrThrow({
+     * // Get one Context
+     * const context = await prisma.context.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends SourceCodeEmbeddingFindUniqueOrThrowArgs>(args: SelectSubset<T, SourceCodeEmbeddingFindUniqueOrThrowArgs<ExtArgs>>): Prisma__SourceCodeEmbeddingClient<$Result.GetResult<Prisma.$SourceCodeEmbeddingPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends ContextFindUniqueOrThrowArgs>(args: SelectSubset<T, ContextFindUniqueOrThrowArgs<ExtArgs>>): Prisma__ContextClient<$Result.GetResult<Prisma.$ContextPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first SourceCodeEmbedding that matches the filter.
+     * Find the first Context that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {SourceCodeEmbeddingFindFirstArgs} args - Arguments to find a SourceCodeEmbedding
+     * @param {ContextFindFirstArgs} args - Arguments to find a Context
      * @example
-     * // Get one SourceCodeEmbedding
-     * const sourceCodeEmbedding = await prisma.sourceCodeEmbedding.findFirst({
+     * // Get one Context
+     * const context = await prisma.context.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends SourceCodeEmbeddingFindFirstArgs>(args?: SelectSubset<T, SourceCodeEmbeddingFindFirstArgs<ExtArgs>>): Prisma__SourceCodeEmbeddingClient<$Result.GetResult<Prisma.$SourceCodeEmbeddingPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends ContextFindFirstArgs>(args?: SelectSubset<T, ContextFindFirstArgs<ExtArgs>>): Prisma__ContextClient<$Result.GetResult<Prisma.$ContextPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first SourceCodeEmbedding that matches the filter or
+     * Find the first Context that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {SourceCodeEmbeddingFindFirstOrThrowArgs} args - Arguments to find a SourceCodeEmbedding
+     * @param {ContextFindFirstOrThrowArgs} args - Arguments to find a Context
      * @example
-     * // Get one SourceCodeEmbedding
-     * const sourceCodeEmbedding = await prisma.sourceCodeEmbedding.findFirstOrThrow({
+     * // Get one Context
+     * const context = await prisma.context.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends SourceCodeEmbeddingFindFirstOrThrowArgs>(args?: SelectSubset<T, SourceCodeEmbeddingFindFirstOrThrowArgs<ExtArgs>>): Prisma__SourceCodeEmbeddingClient<$Result.GetResult<Prisma.$SourceCodeEmbeddingPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends ContextFindFirstOrThrowArgs>(args?: SelectSubset<T, ContextFindFirstOrThrowArgs<ExtArgs>>): Prisma__ContextClient<$Result.GetResult<Prisma.$ContextPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find zero or more SourceCodeEmbeddings that matches the filter.
+     * Find zero or more Contexts that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {SourceCodeEmbeddingFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {ContextFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all SourceCodeEmbeddings
-     * const sourceCodeEmbeddings = await prisma.sourceCodeEmbedding.findMany()
+     * // Get all Contexts
+     * const contexts = await prisma.context.findMany()
      * 
-     * // Get first 10 SourceCodeEmbeddings
-     * const sourceCodeEmbeddings = await prisma.sourceCodeEmbedding.findMany({ take: 10 })
+     * // Get first 10 Contexts
+     * const contexts = await prisma.context.findMany({ take: 10 })
      * 
      * // Only select the `id`
-     * const sourceCodeEmbeddingWithIdOnly = await prisma.sourceCodeEmbedding.findMany({ select: { id: true } })
+     * const contextWithIdOnly = await prisma.context.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends SourceCodeEmbeddingFindManyArgs>(args?: SelectSubset<T, SourceCodeEmbeddingFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$SourceCodeEmbeddingPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends ContextFindManyArgs>(args?: SelectSubset<T, ContextFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ContextPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
-     * Create a SourceCodeEmbedding.
-     * @param {SourceCodeEmbeddingCreateArgs} args - Arguments to create a SourceCodeEmbedding.
+     * Create a Context.
+     * @param {ContextCreateArgs} args - Arguments to create a Context.
      * @example
-     * // Create one SourceCodeEmbedding
-     * const SourceCodeEmbedding = await prisma.sourceCodeEmbedding.create({
+     * // Create one Context
+     * const Context = await prisma.context.create({
      *   data: {
-     *     // ... data to create a SourceCodeEmbedding
+     *     // ... data to create a Context
      *   }
      * })
      * 
      */
-    create<T extends SourceCodeEmbeddingCreateArgs>(args: SelectSubset<T, SourceCodeEmbeddingCreateArgs<ExtArgs>>): Prisma__SourceCodeEmbeddingClient<$Result.GetResult<Prisma.$SourceCodeEmbeddingPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends ContextCreateArgs>(args: SelectSubset<T, ContextCreateArgs<ExtArgs>>): Prisma__ContextClient<$Result.GetResult<Prisma.$ContextPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Create many SourceCodeEmbeddings.
-     * @param {SourceCodeEmbeddingCreateManyArgs} args - Arguments to create many SourceCodeEmbeddings.
+     * Create many Contexts.
+     * @param {ContextCreateManyArgs} args - Arguments to create many Contexts.
      * @example
-     * // Create many SourceCodeEmbeddings
-     * const sourceCodeEmbedding = await prisma.sourceCodeEmbedding.createMany({
+     * // Create many Contexts
+     * const context = await prisma.context.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
      */
-    createMany<T extends SourceCodeEmbeddingCreateManyArgs>(args?: SelectSubset<T, SourceCodeEmbeddingCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends ContextCreateManyArgs>(args?: SelectSubset<T, ContextCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many SourceCodeEmbeddings and returns the data saved in the database.
-     * @param {SourceCodeEmbeddingCreateManyAndReturnArgs} args - Arguments to create many SourceCodeEmbeddings.
+     * Create many Contexts and returns the data saved in the database.
+     * @param {ContextCreateManyAndReturnArgs} args - Arguments to create many Contexts.
      * @example
-     * // Create many SourceCodeEmbeddings
-     * const sourceCodeEmbedding = await prisma.sourceCodeEmbedding.createManyAndReturn({
+     * // Create many Contexts
+     * const context = await prisma.context.createManyAndReturn({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      * 
-     * // Create many SourceCodeEmbeddings and only return the `id`
-     * const sourceCodeEmbeddingWithIdOnly = await prisma.sourceCodeEmbedding.createManyAndReturn({
+     * // Create many Contexts and only return the `id`
+     * const contextWithIdOnly = await prisma.context.createManyAndReturn({
      *   select: { id: true },
      *   data: [
      *     // ... provide data here
@@ -2296,28 +2401,28 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends SourceCodeEmbeddingCreateManyAndReturnArgs>(args?: SelectSubset<T, SourceCodeEmbeddingCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$SourceCodeEmbeddingPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends ContextCreateManyAndReturnArgs>(args?: SelectSubset<T, ContextCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ContextPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Delete a SourceCodeEmbedding.
-     * @param {SourceCodeEmbeddingDeleteArgs} args - Arguments to delete one SourceCodeEmbedding.
+     * Delete a Context.
+     * @param {ContextDeleteArgs} args - Arguments to delete one Context.
      * @example
-     * // Delete one SourceCodeEmbedding
-     * const SourceCodeEmbedding = await prisma.sourceCodeEmbedding.delete({
+     * // Delete one Context
+     * const Context = await prisma.context.delete({
      *   where: {
-     *     // ... filter to delete one SourceCodeEmbedding
+     *     // ... filter to delete one Context
      *   }
      * })
      * 
      */
-    delete<T extends SourceCodeEmbeddingDeleteArgs>(args: SelectSubset<T, SourceCodeEmbeddingDeleteArgs<ExtArgs>>): Prisma__SourceCodeEmbeddingClient<$Result.GetResult<Prisma.$SourceCodeEmbeddingPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends ContextDeleteArgs>(args: SelectSubset<T, ContextDeleteArgs<ExtArgs>>): Prisma__ContextClient<$Result.GetResult<Prisma.$ContextPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Update one SourceCodeEmbedding.
-     * @param {SourceCodeEmbeddingUpdateArgs} args - Arguments to update one SourceCodeEmbedding.
+     * Update one Context.
+     * @param {ContextUpdateArgs} args - Arguments to update one Context.
      * @example
-     * // Update one SourceCodeEmbedding
-     * const sourceCodeEmbedding = await prisma.sourceCodeEmbedding.update({
+     * // Update one Context
+     * const context = await prisma.context.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -2327,30 +2432,30 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends SourceCodeEmbeddingUpdateArgs>(args: SelectSubset<T, SourceCodeEmbeddingUpdateArgs<ExtArgs>>): Prisma__SourceCodeEmbeddingClient<$Result.GetResult<Prisma.$SourceCodeEmbeddingPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends ContextUpdateArgs>(args: SelectSubset<T, ContextUpdateArgs<ExtArgs>>): Prisma__ContextClient<$Result.GetResult<Prisma.$ContextPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Delete zero or more SourceCodeEmbeddings.
-     * @param {SourceCodeEmbeddingDeleteManyArgs} args - Arguments to filter SourceCodeEmbeddings to delete.
+     * Delete zero or more Contexts.
+     * @param {ContextDeleteManyArgs} args - Arguments to filter Contexts to delete.
      * @example
-     * // Delete a few SourceCodeEmbeddings
-     * const { count } = await prisma.sourceCodeEmbedding.deleteMany({
+     * // Delete a few Contexts
+     * const { count } = await prisma.context.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
      */
-    deleteMany<T extends SourceCodeEmbeddingDeleteManyArgs>(args?: SelectSubset<T, SourceCodeEmbeddingDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends ContextDeleteManyArgs>(args?: SelectSubset<T, ContextDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more SourceCodeEmbeddings.
+     * Update zero or more Contexts.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {SourceCodeEmbeddingUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {ContextUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many SourceCodeEmbeddings
-     * const sourceCodeEmbedding = await prisma.sourceCodeEmbedding.updateMany({
+     * // Update many Contexts
+     * const context = await prisma.context.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -2360,14 +2465,14 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends SourceCodeEmbeddingUpdateManyArgs>(args: SelectSubset<T, SourceCodeEmbeddingUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends ContextUpdateManyArgs>(args: SelectSubset<T, ContextUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more SourceCodeEmbeddings and returns the data updated in the database.
-     * @param {SourceCodeEmbeddingUpdateManyAndReturnArgs} args - Arguments to update many SourceCodeEmbeddings.
+     * Update zero or more Contexts and returns the data updated in the database.
+     * @param {ContextUpdateManyAndReturnArgs} args - Arguments to update many Contexts.
      * @example
-     * // Update many SourceCodeEmbeddings
-     * const sourceCodeEmbedding = await prisma.sourceCodeEmbedding.updateManyAndReturn({
+     * // Update many Contexts
+     * const context = await prisma.context.updateManyAndReturn({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -2376,8 +2481,8 @@ export namespace Prisma {
      *   ]
      * })
      * 
-     * // Update zero or more SourceCodeEmbeddings and only return the `id`
-     * const sourceCodeEmbeddingWithIdOnly = await prisma.sourceCodeEmbedding.updateManyAndReturn({
+     * // Update zero or more Contexts and only return the `id`
+     * const contextWithIdOnly = await prisma.context.updateManyAndReturn({
      *   select: { id: true },
      *   where: {
      *     // ... provide filter here
@@ -2390,56 +2495,56 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends SourceCodeEmbeddingUpdateManyAndReturnArgs>(args: SelectSubset<T, SourceCodeEmbeddingUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$SourceCodeEmbeddingPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends ContextUpdateManyAndReturnArgs>(args: SelectSubset<T, ContextUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ContextPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Create or update one SourceCodeEmbedding.
-     * @param {SourceCodeEmbeddingUpsertArgs} args - Arguments to update or create a SourceCodeEmbedding.
+     * Create or update one Context.
+     * @param {ContextUpsertArgs} args - Arguments to update or create a Context.
      * @example
-     * // Update or create a SourceCodeEmbedding
-     * const sourceCodeEmbedding = await prisma.sourceCodeEmbedding.upsert({
+     * // Update or create a Context
+     * const context = await prisma.context.upsert({
      *   create: {
-     *     // ... data to create a SourceCodeEmbedding
+     *     // ... data to create a Context
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the SourceCodeEmbedding we want to update
+     *     // ... the filter for the Context we want to update
      *   }
      * })
      */
-    upsert<T extends SourceCodeEmbeddingUpsertArgs>(args: SelectSubset<T, SourceCodeEmbeddingUpsertArgs<ExtArgs>>): Prisma__SourceCodeEmbeddingClient<$Result.GetResult<Prisma.$SourceCodeEmbeddingPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends ContextUpsertArgs>(args: SelectSubset<T, ContextUpsertArgs<ExtArgs>>): Prisma__ContextClient<$Result.GetResult<Prisma.$ContextPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
-     * Count the number of SourceCodeEmbeddings.
+     * Count the number of Contexts.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {SourceCodeEmbeddingCountArgs} args - Arguments to filter SourceCodeEmbeddings to count.
+     * @param {ContextCountArgs} args - Arguments to filter Contexts to count.
      * @example
-     * // Count the number of SourceCodeEmbeddings
-     * const count = await prisma.sourceCodeEmbedding.count({
+     * // Count the number of Contexts
+     * const count = await prisma.context.count({
      *   where: {
-     *     // ... the filter for the SourceCodeEmbeddings we want to count
+     *     // ... the filter for the Contexts we want to count
      *   }
      * })
     **/
-    count<T extends SourceCodeEmbeddingCountArgs>(
-      args?: Subset<T, SourceCodeEmbeddingCountArgs>,
+    count<T extends ContextCountArgs>(
+      args?: Subset<T, ContextCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], SourceCodeEmbeddingCountAggregateOutputType>
+          : GetScalarType<T['select'], ContextCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a SourceCodeEmbedding.
+     * Allows you to perform aggregations operations on a Context.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {SourceCodeEmbeddingAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {ContextAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -2459,13 +2564,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends SourceCodeEmbeddingAggregateArgs>(args: Subset<T, SourceCodeEmbeddingAggregateArgs>): Prisma.PrismaPromise<GetSourceCodeEmbeddingAggregateType<T>>
+    aggregate<T extends ContextAggregateArgs>(args: Subset<T, ContextAggregateArgs>): Prisma.PrismaPromise<GetContextAggregateType<T>>
 
     /**
-     * Group by SourceCodeEmbedding.
+     * Group by Context.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {SourceCodeEmbeddingGroupByArgs} args - Group by arguments.
+     * @param {ContextGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -2480,14 +2585,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends SourceCodeEmbeddingGroupByArgs,
+      T extends ContextGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: SourceCodeEmbeddingGroupByArgs['orderBy'] }
-        : { orderBy?: SourceCodeEmbeddingGroupByArgs['orderBy'] },
+        ? { orderBy: ContextGroupByArgs['orderBy'] }
+        : { orderBy?: ContextGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -2536,21 +2641,22 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, SourceCodeEmbeddingGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetSourceCodeEmbeddingGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, ContextGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetContextGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the SourceCodeEmbedding model
+   * Fields of the Context model
    */
-  readonly fields: SourceCodeEmbeddingFieldRefs;
+  readonly fields: ContextFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for SourceCodeEmbedding.
+   * The delegate class that acts as a "Promise-like" for Context.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__SourceCodeEmbeddingClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__ContextClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
+    repository<T extends RepositoryDefaultArgs<ExtArgs> = {}>(args?: Subset<T, RepositoryDefaultArgs<ExtArgs>>): Prisma__RepositoryClient<$Result.GetResult<Prisma.$RepositoryPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -2577,376 +2683,425 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the SourceCodeEmbedding model
+   * Fields of the Context model
    */ 
-  interface SourceCodeEmbeddingFieldRefs {
-    readonly id: FieldRef<"SourceCodeEmbedding", 'String'>
-    readonly sourceCode: FieldRef<"SourceCodeEmbedding", 'String'>
-    readonly fileName: FieldRef<"SourceCodeEmbedding", 'String'>
-    readonly summary: FieldRef<"SourceCodeEmbedding", 'String'>
+  interface ContextFieldRefs {
+    readonly id: FieldRef<"Context", 'String'>
+    readonly content: FieldRef<"Context", 'String'>
+    readonly filePath: FieldRef<"Context", 'String'>
+    readonly repoId: FieldRef<"Context", 'String'>
+    readonly createdAt: FieldRef<"Context", 'DateTime'>
   }
     
 
   // Custom InputTypes
   /**
-   * SourceCodeEmbedding findUnique
+   * Context findUnique
    */
-  export type SourceCodeEmbeddingFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ContextFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the SourceCodeEmbedding
+     * Select specific fields to fetch from the Context
      */
-    select?: SourceCodeEmbeddingSelect<ExtArgs> | null
+    select?: ContextSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the SourceCodeEmbedding
+     * Omit specific fields from the Context
      */
-    omit?: SourceCodeEmbeddingOmit<ExtArgs> | null
+    omit?: ContextOmit<ExtArgs> | null
     /**
-     * Filter, which SourceCodeEmbedding to fetch.
+     * Choose, which related nodes to fetch as well
      */
-    where: SourceCodeEmbeddingWhereUniqueInput
+    include?: ContextInclude<ExtArgs> | null
+    /**
+     * Filter, which Context to fetch.
+     */
+    where: ContextWhereUniqueInput
   }
 
   /**
-   * SourceCodeEmbedding findUniqueOrThrow
+   * Context findUniqueOrThrow
    */
-  export type SourceCodeEmbeddingFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ContextFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the SourceCodeEmbedding
+     * Select specific fields to fetch from the Context
      */
-    select?: SourceCodeEmbeddingSelect<ExtArgs> | null
+    select?: ContextSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the SourceCodeEmbedding
+     * Omit specific fields from the Context
      */
-    omit?: SourceCodeEmbeddingOmit<ExtArgs> | null
+    omit?: ContextOmit<ExtArgs> | null
     /**
-     * Filter, which SourceCodeEmbedding to fetch.
+     * Choose, which related nodes to fetch as well
      */
-    where: SourceCodeEmbeddingWhereUniqueInput
+    include?: ContextInclude<ExtArgs> | null
+    /**
+     * Filter, which Context to fetch.
+     */
+    where: ContextWhereUniqueInput
   }
 
   /**
-   * SourceCodeEmbedding findFirst
+   * Context findFirst
    */
-  export type SourceCodeEmbeddingFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ContextFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the SourceCodeEmbedding
+     * Select specific fields to fetch from the Context
      */
-    select?: SourceCodeEmbeddingSelect<ExtArgs> | null
+    select?: ContextSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the SourceCodeEmbedding
+     * Omit specific fields from the Context
      */
-    omit?: SourceCodeEmbeddingOmit<ExtArgs> | null
+    omit?: ContextOmit<ExtArgs> | null
     /**
-     * Filter, which SourceCodeEmbedding to fetch.
+     * Choose, which related nodes to fetch as well
      */
-    where?: SourceCodeEmbeddingWhereInput
+    include?: ContextInclude<ExtArgs> | null
+    /**
+     * Filter, which Context to fetch.
+     */
+    where?: ContextWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of SourceCodeEmbeddings to fetch.
+     * Determine the order of Contexts to fetch.
      */
-    orderBy?: SourceCodeEmbeddingOrderByWithRelationInput | SourceCodeEmbeddingOrderByWithRelationInput[]
+    orderBy?: ContextOrderByWithRelationInput | ContextOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for SourceCodeEmbeddings.
+     * Sets the position for searching for Contexts.
      */
-    cursor?: SourceCodeEmbeddingWhereUniqueInput
+    cursor?: ContextWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` SourceCodeEmbeddings from the position of the cursor.
+     * Take `±n` Contexts from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` SourceCodeEmbeddings.
+     * Skip the first `n` Contexts.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of SourceCodeEmbeddings.
+     * Filter by unique combinations of Contexts.
      */
-    distinct?: SourceCodeEmbeddingScalarFieldEnum | SourceCodeEmbeddingScalarFieldEnum[]
+    distinct?: ContextScalarFieldEnum | ContextScalarFieldEnum[]
   }
 
   /**
-   * SourceCodeEmbedding findFirstOrThrow
+   * Context findFirstOrThrow
    */
-  export type SourceCodeEmbeddingFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ContextFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the SourceCodeEmbedding
+     * Select specific fields to fetch from the Context
      */
-    select?: SourceCodeEmbeddingSelect<ExtArgs> | null
+    select?: ContextSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the SourceCodeEmbedding
+     * Omit specific fields from the Context
      */
-    omit?: SourceCodeEmbeddingOmit<ExtArgs> | null
+    omit?: ContextOmit<ExtArgs> | null
     /**
-     * Filter, which SourceCodeEmbedding to fetch.
+     * Choose, which related nodes to fetch as well
      */
-    where?: SourceCodeEmbeddingWhereInput
+    include?: ContextInclude<ExtArgs> | null
+    /**
+     * Filter, which Context to fetch.
+     */
+    where?: ContextWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of SourceCodeEmbeddings to fetch.
+     * Determine the order of Contexts to fetch.
      */
-    orderBy?: SourceCodeEmbeddingOrderByWithRelationInput | SourceCodeEmbeddingOrderByWithRelationInput[]
+    orderBy?: ContextOrderByWithRelationInput | ContextOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for SourceCodeEmbeddings.
+     * Sets the position for searching for Contexts.
      */
-    cursor?: SourceCodeEmbeddingWhereUniqueInput
+    cursor?: ContextWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` SourceCodeEmbeddings from the position of the cursor.
+     * Take `±n` Contexts from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` SourceCodeEmbeddings.
+     * Skip the first `n` Contexts.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of SourceCodeEmbeddings.
+     * Filter by unique combinations of Contexts.
      */
-    distinct?: SourceCodeEmbeddingScalarFieldEnum | SourceCodeEmbeddingScalarFieldEnum[]
+    distinct?: ContextScalarFieldEnum | ContextScalarFieldEnum[]
   }
 
   /**
-   * SourceCodeEmbedding findMany
+   * Context findMany
    */
-  export type SourceCodeEmbeddingFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ContextFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the SourceCodeEmbedding
+     * Select specific fields to fetch from the Context
      */
-    select?: SourceCodeEmbeddingSelect<ExtArgs> | null
+    select?: ContextSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the SourceCodeEmbedding
+     * Omit specific fields from the Context
      */
-    omit?: SourceCodeEmbeddingOmit<ExtArgs> | null
+    omit?: ContextOmit<ExtArgs> | null
     /**
-     * Filter, which SourceCodeEmbeddings to fetch.
+     * Choose, which related nodes to fetch as well
      */
-    where?: SourceCodeEmbeddingWhereInput
+    include?: ContextInclude<ExtArgs> | null
+    /**
+     * Filter, which Contexts to fetch.
+     */
+    where?: ContextWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of SourceCodeEmbeddings to fetch.
+     * Determine the order of Contexts to fetch.
      */
-    orderBy?: SourceCodeEmbeddingOrderByWithRelationInput | SourceCodeEmbeddingOrderByWithRelationInput[]
+    orderBy?: ContextOrderByWithRelationInput | ContextOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing SourceCodeEmbeddings.
+     * Sets the position for listing Contexts.
      */
-    cursor?: SourceCodeEmbeddingWhereUniqueInput
+    cursor?: ContextWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` SourceCodeEmbeddings from the position of the cursor.
+     * Take `±n` Contexts from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` SourceCodeEmbeddings.
+     * Skip the first `n` Contexts.
      */
     skip?: number
-    distinct?: SourceCodeEmbeddingScalarFieldEnum | SourceCodeEmbeddingScalarFieldEnum[]
+    distinct?: ContextScalarFieldEnum | ContextScalarFieldEnum[]
   }
 
   /**
-   * SourceCodeEmbedding create
+   * Context create
    */
-  export type SourceCodeEmbeddingCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ContextCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the SourceCodeEmbedding
+     * Select specific fields to fetch from the Context
      */
-    select?: SourceCodeEmbeddingSelect<ExtArgs> | null
+    select?: ContextSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the SourceCodeEmbedding
+     * Omit specific fields from the Context
      */
-    omit?: SourceCodeEmbeddingOmit<ExtArgs> | null
+    omit?: ContextOmit<ExtArgs> | null
     /**
-     * The data needed to create a SourceCodeEmbedding.
+     * Choose, which related nodes to fetch as well
      */
-    data: XOR<SourceCodeEmbeddingCreateInput, SourceCodeEmbeddingUncheckedCreateInput>
+    include?: ContextInclude<ExtArgs> | null
+    /**
+     * The data needed to create a Context.
+     */
+    data: XOR<ContextCreateInput, ContextUncheckedCreateInput>
   }
 
   /**
-   * SourceCodeEmbedding createMany
+   * Context createMany
    */
-  export type SourceCodeEmbeddingCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ContextCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many SourceCodeEmbeddings.
+     * The data used to create many Contexts.
      */
-    data: SourceCodeEmbeddingCreateManyInput | SourceCodeEmbeddingCreateManyInput[]
+    data: ContextCreateManyInput | ContextCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * SourceCodeEmbedding createManyAndReturn
+   * Context createManyAndReturn
    */
-  export type SourceCodeEmbeddingCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ContextCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the SourceCodeEmbedding
+     * Select specific fields to fetch from the Context
      */
-    select?: SourceCodeEmbeddingSelectCreateManyAndReturn<ExtArgs> | null
+    select?: ContextSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the SourceCodeEmbedding
+     * Omit specific fields from the Context
      */
-    omit?: SourceCodeEmbeddingOmit<ExtArgs> | null
+    omit?: ContextOmit<ExtArgs> | null
     /**
-     * The data used to create many SourceCodeEmbeddings.
+     * The data used to create many Contexts.
      */
-    data: SourceCodeEmbeddingCreateManyInput | SourceCodeEmbeddingCreateManyInput[]
+    data: ContextCreateManyInput | ContextCreateManyInput[]
     skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContextIncludeCreateManyAndReturn<ExtArgs> | null
   }
 
   /**
-   * SourceCodeEmbedding update
+   * Context update
    */
-  export type SourceCodeEmbeddingUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ContextUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the SourceCodeEmbedding
+     * Select specific fields to fetch from the Context
      */
-    select?: SourceCodeEmbeddingSelect<ExtArgs> | null
+    select?: ContextSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the SourceCodeEmbedding
+     * Omit specific fields from the Context
      */
-    omit?: SourceCodeEmbeddingOmit<ExtArgs> | null
+    omit?: ContextOmit<ExtArgs> | null
     /**
-     * The data needed to update a SourceCodeEmbedding.
+     * Choose, which related nodes to fetch as well
      */
-    data: XOR<SourceCodeEmbeddingUpdateInput, SourceCodeEmbeddingUncheckedUpdateInput>
+    include?: ContextInclude<ExtArgs> | null
     /**
-     * Choose, which SourceCodeEmbedding to update.
+     * The data needed to update a Context.
      */
-    where: SourceCodeEmbeddingWhereUniqueInput
+    data: XOR<ContextUpdateInput, ContextUncheckedUpdateInput>
+    /**
+     * Choose, which Context to update.
+     */
+    where: ContextWhereUniqueInput
   }
 
   /**
-   * SourceCodeEmbedding updateMany
+   * Context updateMany
    */
-  export type SourceCodeEmbeddingUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ContextUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update SourceCodeEmbeddings.
+     * The data used to update Contexts.
      */
-    data: XOR<SourceCodeEmbeddingUpdateManyMutationInput, SourceCodeEmbeddingUncheckedUpdateManyInput>
+    data: XOR<ContextUpdateManyMutationInput, ContextUncheckedUpdateManyInput>
     /**
-     * Filter which SourceCodeEmbeddings to update
+     * Filter which Contexts to update
      */
-    where?: SourceCodeEmbeddingWhereInput
+    where?: ContextWhereInput
     /**
-     * Limit how many SourceCodeEmbeddings to update.
+     * Limit how many Contexts to update.
      */
     limit?: number
   }
 
   /**
-   * SourceCodeEmbedding updateManyAndReturn
+   * Context updateManyAndReturn
    */
-  export type SourceCodeEmbeddingUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ContextUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the SourceCodeEmbedding
+     * Select specific fields to fetch from the Context
      */
-    select?: SourceCodeEmbeddingSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: ContextSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the SourceCodeEmbedding
+     * Omit specific fields from the Context
      */
-    omit?: SourceCodeEmbeddingOmit<ExtArgs> | null
+    omit?: ContextOmit<ExtArgs> | null
     /**
-     * The data used to update SourceCodeEmbeddings.
+     * The data used to update Contexts.
      */
-    data: XOR<SourceCodeEmbeddingUpdateManyMutationInput, SourceCodeEmbeddingUncheckedUpdateManyInput>
+    data: XOR<ContextUpdateManyMutationInput, ContextUncheckedUpdateManyInput>
     /**
-     * Filter which SourceCodeEmbeddings to update
+     * Filter which Contexts to update
      */
-    where?: SourceCodeEmbeddingWhereInput
+    where?: ContextWhereInput
     /**
-     * Limit how many SourceCodeEmbeddings to update.
+     * Limit how many Contexts to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContextIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * Context upsert
+   */
+  export type ContextUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Context
+     */
+    select?: ContextSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Context
+     */
+    omit?: ContextOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContextInclude<ExtArgs> | null
+    /**
+     * The filter to search for the Context to update in case it exists.
+     */
+    where: ContextWhereUniqueInput
+    /**
+     * In case the Context found by the `where` argument doesn't exist, create a new Context with this data.
+     */
+    create: XOR<ContextCreateInput, ContextUncheckedCreateInput>
+    /**
+     * In case the Context was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<ContextUpdateInput, ContextUncheckedUpdateInput>
+  }
+
+  /**
+   * Context delete
+   */
+  export type ContextDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Context
+     */
+    select?: ContextSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Context
+     */
+    omit?: ContextOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContextInclude<ExtArgs> | null
+    /**
+     * Filter which Context to delete.
+     */
+    where: ContextWhereUniqueInput
+  }
+
+  /**
+   * Context deleteMany
+   */
+  export type ContextDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which Contexts to delete
+     */
+    where?: ContextWhereInput
+    /**
+     * Limit how many Contexts to delete.
      */
     limit?: number
   }
 
   /**
-   * SourceCodeEmbedding upsert
+   * Context without action
    */
-  export type SourceCodeEmbeddingUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ContextDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the SourceCodeEmbedding
+     * Select specific fields to fetch from the Context
      */
-    select?: SourceCodeEmbeddingSelect<ExtArgs> | null
+    select?: ContextSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the SourceCodeEmbedding
+     * Omit specific fields from the Context
      */
-    omit?: SourceCodeEmbeddingOmit<ExtArgs> | null
+    omit?: ContextOmit<ExtArgs> | null
     /**
-     * The filter to search for the SourceCodeEmbedding to update in case it exists.
+     * Choose, which related nodes to fetch as well
      */
-    where: SourceCodeEmbeddingWhereUniqueInput
-    /**
-     * In case the SourceCodeEmbedding found by the `where` argument doesn't exist, create a new SourceCodeEmbedding with this data.
-     */
-    create: XOR<SourceCodeEmbeddingCreateInput, SourceCodeEmbeddingUncheckedCreateInput>
-    /**
-     * In case the SourceCodeEmbedding was found with the provided `where` argument, update it with this data.
-     */
-    update: XOR<SourceCodeEmbeddingUpdateInput, SourceCodeEmbeddingUncheckedUpdateInput>
-  }
-
-  /**
-   * SourceCodeEmbedding delete
-   */
-  export type SourceCodeEmbeddingDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the SourceCodeEmbedding
-     */
-    select?: SourceCodeEmbeddingSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the SourceCodeEmbedding
-     */
-    omit?: SourceCodeEmbeddingOmit<ExtArgs> | null
-    /**
-     * Filter which SourceCodeEmbedding to delete.
-     */
-    where: SourceCodeEmbeddingWhereUniqueInput
-  }
-
-  /**
-   * SourceCodeEmbedding deleteMany
-   */
-  export type SourceCodeEmbeddingDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Filter which SourceCodeEmbeddings to delete
-     */
-    where?: SourceCodeEmbeddingWhereInput
-    /**
-     * Limit how many SourceCodeEmbeddings to delete.
-     */
-    limit?: number
-  }
-
-  /**
-   * SourceCodeEmbedding without action
-   */
-  export type SourceCodeEmbeddingDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the SourceCodeEmbedding
-     */
-    select?: SourceCodeEmbeddingSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the SourceCodeEmbedding
-     */
-    omit?: SourceCodeEmbeddingOmit<ExtArgs> | null
+    include?: ContextInclude<ExtArgs> | null
   }
 
 
@@ -2966,24 +3121,23 @@ export namespace Prisma {
 
   export const RepositoryScalarFieldEnum: {
     id: 'id',
-    url: 'url',
     name: 'name',
-    description: 'description',
-    createdAt: 'createdAt',
-    updatedAt: 'updatedAt'
+    url: 'url',
+    createdAt: 'createdAt'
   };
 
   export type RepositoryScalarFieldEnum = (typeof RepositoryScalarFieldEnum)[keyof typeof RepositoryScalarFieldEnum]
 
 
-  export const SourceCodeEmbeddingScalarFieldEnum: {
+  export const ContextScalarFieldEnum: {
     id: 'id',
-    sourceCode: 'sourceCode',
-    fileName: 'fileName',
-    summary: 'summary'
+    content: 'content',
+    filePath: 'filePath',
+    repoId: 'repoId',
+    createdAt: 'createdAt'
   };
 
-  export type SourceCodeEmbeddingScalarFieldEnum = (typeof SourceCodeEmbeddingScalarFieldEnum)[keyof typeof SourceCodeEmbeddingScalarFieldEnum]
+  export type ContextScalarFieldEnum = (typeof ContextScalarFieldEnum)[keyof typeof ContextScalarFieldEnum]
 
 
   export const SortOrder: {
@@ -3057,41 +3211,36 @@ export namespace Prisma {
     OR?: RepositoryWhereInput[]
     NOT?: RepositoryWhereInput | RepositoryWhereInput[]
     id?: StringFilter<"Repository"> | string
-    url?: StringFilter<"Repository"> | string
     name?: StringFilter<"Repository"> | string
-    description?: StringFilter<"Repository"> | string
+    url?: StringFilter<"Repository"> | string
     createdAt?: DateTimeFilter<"Repository"> | Date | string
-    updatedAt?: DateTimeFilter<"Repository"> | Date | string
+    contexts?: ContextListRelationFilter
   }
 
   export type RepositoryOrderByWithRelationInput = {
     id?: SortOrder
-    url?: SortOrder
     name?: SortOrder
-    description?: SortOrder
+    url?: SortOrder
     createdAt?: SortOrder
-    updatedAt?: SortOrder
+    contexts?: ContextOrderByRelationAggregateInput
   }
 
   export type RepositoryWhereUniqueInput = Prisma.AtLeast<{
     id?: string
-    url?: string
     AND?: RepositoryWhereInput | RepositoryWhereInput[]
     OR?: RepositoryWhereInput[]
     NOT?: RepositoryWhereInput | RepositoryWhereInput[]
     name?: StringFilter<"Repository"> | string
-    description?: StringFilter<"Repository"> | string
+    url?: StringFilter<"Repository"> | string
     createdAt?: DateTimeFilter<"Repository"> | Date | string
-    updatedAt?: DateTimeFilter<"Repository"> | Date | string
-  }, "id" | "url">
+    contexts?: ContextListRelationFilter
+  }, "id">
 
   export type RepositoryOrderByWithAggregationInput = {
     id?: SortOrder
-    url?: SortOrder
     name?: SortOrder
-    description?: SortOrder
+    url?: SortOrder
     createdAt?: SortOrder
-    updatedAt?: SortOrder
     _count?: RepositoryCountOrderByAggregateInput
     _max?: RepositoryMaxOrderByAggregateInput
     _min?: RepositoryMinOrderByAggregateInput
@@ -3102,170 +3251,172 @@ export namespace Prisma {
     OR?: RepositoryScalarWhereWithAggregatesInput[]
     NOT?: RepositoryScalarWhereWithAggregatesInput | RepositoryScalarWhereWithAggregatesInput[]
     id?: StringWithAggregatesFilter<"Repository"> | string
-    url?: StringWithAggregatesFilter<"Repository"> | string
     name?: StringWithAggregatesFilter<"Repository"> | string
-    description?: StringWithAggregatesFilter<"Repository"> | string
+    url?: StringWithAggregatesFilter<"Repository"> | string
     createdAt?: DateTimeWithAggregatesFilter<"Repository"> | Date | string
-    updatedAt?: DateTimeWithAggregatesFilter<"Repository"> | Date | string
   }
 
-  export type SourceCodeEmbeddingWhereInput = {
-    AND?: SourceCodeEmbeddingWhereInput | SourceCodeEmbeddingWhereInput[]
-    OR?: SourceCodeEmbeddingWhereInput[]
-    NOT?: SourceCodeEmbeddingWhereInput | SourceCodeEmbeddingWhereInput[]
-    id?: StringFilter<"SourceCodeEmbedding"> | string
-    sourceCode?: StringFilter<"SourceCodeEmbedding"> | string
-    fileName?: StringFilter<"SourceCodeEmbedding"> | string
-    summary?: StringFilter<"SourceCodeEmbedding"> | string
+  export type ContextWhereInput = {
+    AND?: ContextWhereInput | ContextWhereInput[]
+    OR?: ContextWhereInput[]
+    NOT?: ContextWhereInput | ContextWhereInput[]
+    id?: StringFilter<"Context"> | string
+    content?: StringFilter<"Context"> | string
+    filePath?: StringFilter<"Context"> | string
+    repoId?: StringFilter<"Context"> | string
+    createdAt?: DateTimeFilter<"Context"> | Date | string
+    repository?: XOR<RepositoryScalarRelationFilter, RepositoryWhereInput>
   }
 
-  export type SourceCodeEmbeddingOrderByWithRelationInput = {
+  export type ContextOrderByWithRelationInput = {
     id?: SortOrder
-    sourceCode?: SortOrder
-    fileName?: SortOrder
-    summary?: SortOrder
+    content?: SortOrder
+    filePath?: SortOrder
+    repoId?: SortOrder
+    createdAt?: SortOrder
+    repository?: RepositoryOrderByWithRelationInput
   }
 
-  export type SourceCodeEmbeddingWhereUniqueInput = Prisma.AtLeast<{
+  export type ContextWhereUniqueInput = Prisma.AtLeast<{
     id?: string
-    AND?: SourceCodeEmbeddingWhereInput | SourceCodeEmbeddingWhereInput[]
-    OR?: SourceCodeEmbeddingWhereInput[]
-    NOT?: SourceCodeEmbeddingWhereInput | SourceCodeEmbeddingWhereInput[]
-    sourceCode?: StringFilter<"SourceCodeEmbedding"> | string
-    fileName?: StringFilter<"SourceCodeEmbedding"> | string
-    summary?: StringFilter<"SourceCodeEmbedding"> | string
+    AND?: ContextWhereInput | ContextWhereInput[]
+    OR?: ContextWhereInput[]
+    NOT?: ContextWhereInput | ContextWhereInput[]
+    content?: StringFilter<"Context"> | string
+    filePath?: StringFilter<"Context"> | string
+    repoId?: StringFilter<"Context"> | string
+    createdAt?: DateTimeFilter<"Context"> | Date | string
+    repository?: XOR<RepositoryScalarRelationFilter, RepositoryWhereInput>
   }, "id">
 
-  export type SourceCodeEmbeddingOrderByWithAggregationInput = {
+  export type ContextOrderByWithAggregationInput = {
     id?: SortOrder
-    sourceCode?: SortOrder
-    fileName?: SortOrder
-    summary?: SortOrder
-    _count?: SourceCodeEmbeddingCountOrderByAggregateInput
-    _max?: SourceCodeEmbeddingMaxOrderByAggregateInput
-    _min?: SourceCodeEmbeddingMinOrderByAggregateInput
+    content?: SortOrder
+    filePath?: SortOrder
+    repoId?: SortOrder
+    createdAt?: SortOrder
+    _count?: ContextCountOrderByAggregateInput
+    _max?: ContextMaxOrderByAggregateInput
+    _min?: ContextMinOrderByAggregateInput
   }
 
-  export type SourceCodeEmbeddingScalarWhereWithAggregatesInput = {
-    AND?: SourceCodeEmbeddingScalarWhereWithAggregatesInput | SourceCodeEmbeddingScalarWhereWithAggregatesInput[]
-    OR?: SourceCodeEmbeddingScalarWhereWithAggregatesInput[]
-    NOT?: SourceCodeEmbeddingScalarWhereWithAggregatesInput | SourceCodeEmbeddingScalarWhereWithAggregatesInput[]
-    id?: StringWithAggregatesFilter<"SourceCodeEmbedding"> | string
-    sourceCode?: StringWithAggregatesFilter<"SourceCodeEmbedding"> | string
-    fileName?: StringWithAggregatesFilter<"SourceCodeEmbedding"> | string
-    summary?: StringWithAggregatesFilter<"SourceCodeEmbedding"> | string
+  export type ContextScalarWhereWithAggregatesInput = {
+    AND?: ContextScalarWhereWithAggregatesInput | ContextScalarWhereWithAggregatesInput[]
+    OR?: ContextScalarWhereWithAggregatesInput[]
+    NOT?: ContextScalarWhereWithAggregatesInput | ContextScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"Context"> | string
+    content?: StringWithAggregatesFilter<"Context"> | string
+    filePath?: StringWithAggregatesFilter<"Context"> | string
+    repoId?: StringWithAggregatesFilter<"Context"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"Context"> | Date | string
   }
 
   export type RepositoryCreateInput = {
     id?: string
-    url: string
     name: string
-    description: string
+    url: string
     createdAt?: Date | string
-    updatedAt?: Date | string
+    contexts?: ContextCreateNestedManyWithoutRepositoryInput
   }
 
   export type RepositoryUncheckedCreateInput = {
     id?: string
-    url: string
     name: string
-    description: string
+    url: string
     createdAt?: Date | string
-    updatedAt?: Date | string
+    contexts?: ContextUncheckedCreateNestedManyWithoutRepositoryInput
   }
 
   export type RepositoryUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
-    url?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
-    description?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    contexts?: ContextUpdateManyWithoutRepositoryNestedInput
   }
 
   export type RepositoryUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
-    url?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
-    description?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    contexts?: ContextUncheckedUpdateManyWithoutRepositoryNestedInput
   }
 
   export type RepositoryCreateManyInput = {
     id?: string
-    url: string
     name: string
-    description: string
+    url: string
     createdAt?: Date | string
-    updatedAt?: Date | string
   }
 
   export type RepositoryUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
-    url?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
-    description?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type RepositoryUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
-    url?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
-    description?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type SourceCodeEmbeddingCreateInput = {
+  export type ContextCreateInput = {
     id?: string
-    sourceCode: string
-    fileName: string
-    summary: string
+    content: string
+    filePath: string
+    createdAt?: Date | string
+    repository: RepositoryCreateNestedOneWithoutContextsInput
   }
 
-  export type SourceCodeEmbeddingUncheckedCreateInput = {
+  export type ContextUncheckedCreateInput = {
     id?: string
-    sourceCode: string
-    fileName: string
-    summary: string
+    content: string
+    filePath: string
+    repoId: string
+    createdAt?: Date | string
   }
 
-  export type SourceCodeEmbeddingUpdateInput = {
+  export type ContextUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
-    sourceCode?: StringFieldUpdateOperationsInput | string
-    fileName?: StringFieldUpdateOperationsInput | string
-    summary?: StringFieldUpdateOperationsInput | string
+    content?: StringFieldUpdateOperationsInput | string
+    filePath?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    repository?: RepositoryUpdateOneRequiredWithoutContextsNestedInput
   }
 
-  export type SourceCodeEmbeddingUncheckedUpdateInput = {
+  export type ContextUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
-    sourceCode?: StringFieldUpdateOperationsInput | string
-    fileName?: StringFieldUpdateOperationsInput | string
-    summary?: StringFieldUpdateOperationsInput | string
+    content?: StringFieldUpdateOperationsInput | string
+    filePath?: StringFieldUpdateOperationsInput | string
+    repoId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type SourceCodeEmbeddingCreateManyInput = {
+  export type ContextCreateManyInput = {
     id?: string
-    sourceCode: string
-    fileName: string
-    summary: string
+    content: string
+    filePath: string
+    repoId: string
+    createdAt?: Date | string
   }
 
-  export type SourceCodeEmbeddingUpdateManyMutationInput = {
+  export type ContextUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
-    sourceCode?: StringFieldUpdateOperationsInput | string
-    fileName?: StringFieldUpdateOperationsInput | string
-    summary?: StringFieldUpdateOperationsInput | string
+    content?: StringFieldUpdateOperationsInput | string
+    filePath?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type SourceCodeEmbeddingUncheckedUpdateManyInput = {
+  export type ContextUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
-    sourceCode?: StringFieldUpdateOperationsInput | string
-    fileName?: StringFieldUpdateOperationsInput | string
-    summary?: StringFieldUpdateOperationsInput | string
+    content?: StringFieldUpdateOperationsInput | string
+    filePath?: StringFieldUpdateOperationsInput | string
+    repoId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type StringFilter<$PrismaModel = never> = {
@@ -3294,31 +3445,35 @@ export namespace Prisma {
     not?: NestedDateTimeFilter<$PrismaModel> | Date | string
   }
 
+  export type ContextListRelationFilter = {
+    every?: ContextWhereInput
+    some?: ContextWhereInput
+    none?: ContextWhereInput
+  }
+
+  export type ContextOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
   export type RepositoryCountOrderByAggregateInput = {
     id?: SortOrder
-    url?: SortOrder
     name?: SortOrder
-    description?: SortOrder
+    url?: SortOrder
     createdAt?: SortOrder
-    updatedAt?: SortOrder
   }
 
   export type RepositoryMaxOrderByAggregateInput = {
     id?: SortOrder
-    url?: SortOrder
     name?: SortOrder
-    description?: SortOrder
+    url?: SortOrder
     createdAt?: SortOrder
-    updatedAt?: SortOrder
   }
 
   export type RepositoryMinOrderByAggregateInput = {
     id?: SortOrder
-    url?: SortOrder
     name?: SortOrder
-    description?: SortOrder
+    url?: SortOrder
     createdAt?: SortOrder
-    updatedAt?: SortOrder
   }
 
   export type StringWithAggregatesFilter<$PrismaModel = never> = {
@@ -3353,25 +3508,47 @@ export namespace Prisma {
     _max?: NestedDateTimeFilter<$PrismaModel>
   }
 
-  export type SourceCodeEmbeddingCountOrderByAggregateInput = {
-    id?: SortOrder
-    sourceCode?: SortOrder
-    fileName?: SortOrder
-    summary?: SortOrder
+  export type RepositoryScalarRelationFilter = {
+    is?: RepositoryWhereInput
+    isNot?: RepositoryWhereInput
   }
 
-  export type SourceCodeEmbeddingMaxOrderByAggregateInput = {
+  export type ContextCountOrderByAggregateInput = {
     id?: SortOrder
-    sourceCode?: SortOrder
-    fileName?: SortOrder
-    summary?: SortOrder
+    content?: SortOrder
+    filePath?: SortOrder
+    repoId?: SortOrder
+    createdAt?: SortOrder
   }
 
-  export type SourceCodeEmbeddingMinOrderByAggregateInput = {
+  export type ContextMaxOrderByAggregateInput = {
     id?: SortOrder
-    sourceCode?: SortOrder
-    fileName?: SortOrder
-    summary?: SortOrder
+    content?: SortOrder
+    filePath?: SortOrder
+    repoId?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type ContextMinOrderByAggregateInput = {
+    id?: SortOrder
+    content?: SortOrder
+    filePath?: SortOrder
+    repoId?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type ContextCreateNestedManyWithoutRepositoryInput = {
+    create?: XOR<ContextCreateWithoutRepositoryInput, ContextUncheckedCreateWithoutRepositoryInput> | ContextCreateWithoutRepositoryInput[] | ContextUncheckedCreateWithoutRepositoryInput[]
+    connectOrCreate?: ContextCreateOrConnectWithoutRepositoryInput | ContextCreateOrConnectWithoutRepositoryInput[]
+    createMany?: ContextCreateManyRepositoryInputEnvelope
+    connect?: ContextWhereUniqueInput | ContextWhereUniqueInput[]
+  }
+
+  export type ContextUncheckedCreateNestedManyWithoutRepositoryInput = {
+    create?: XOR<ContextCreateWithoutRepositoryInput, ContextUncheckedCreateWithoutRepositoryInput> | ContextCreateWithoutRepositoryInput[] | ContextUncheckedCreateWithoutRepositoryInput[]
+    connectOrCreate?: ContextCreateOrConnectWithoutRepositoryInput | ContextCreateOrConnectWithoutRepositoryInput[]
+    createMany?: ContextCreateManyRepositoryInputEnvelope
+    connect?: ContextWhereUniqueInput | ContextWhereUniqueInput[]
   }
 
   export type StringFieldUpdateOperationsInput = {
@@ -3380,6 +3557,48 @@ export namespace Prisma {
 
   export type DateTimeFieldUpdateOperationsInput = {
     set?: Date | string
+  }
+
+  export type ContextUpdateManyWithoutRepositoryNestedInput = {
+    create?: XOR<ContextCreateWithoutRepositoryInput, ContextUncheckedCreateWithoutRepositoryInput> | ContextCreateWithoutRepositoryInput[] | ContextUncheckedCreateWithoutRepositoryInput[]
+    connectOrCreate?: ContextCreateOrConnectWithoutRepositoryInput | ContextCreateOrConnectWithoutRepositoryInput[]
+    upsert?: ContextUpsertWithWhereUniqueWithoutRepositoryInput | ContextUpsertWithWhereUniqueWithoutRepositoryInput[]
+    createMany?: ContextCreateManyRepositoryInputEnvelope
+    set?: ContextWhereUniqueInput | ContextWhereUniqueInput[]
+    disconnect?: ContextWhereUniqueInput | ContextWhereUniqueInput[]
+    delete?: ContextWhereUniqueInput | ContextWhereUniqueInput[]
+    connect?: ContextWhereUniqueInput | ContextWhereUniqueInput[]
+    update?: ContextUpdateWithWhereUniqueWithoutRepositoryInput | ContextUpdateWithWhereUniqueWithoutRepositoryInput[]
+    updateMany?: ContextUpdateManyWithWhereWithoutRepositoryInput | ContextUpdateManyWithWhereWithoutRepositoryInput[]
+    deleteMany?: ContextScalarWhereInput | ContextScalarWhereInput[]
+  }
+
+  export type ContextUncheckedUpdateManyWithoutRepositoryNestedInput = {
+    create?: XOR<ContextCreateWithoutRepositoryInput, ContextUncheckedCreateWithoutRepositoryInput> | ContextCreateWithoutRepositoryInput[] | ContextUncheckedCreateWithoutRepositoryInput[]
+    connectOrCreate?: ContextCreateOrConnectWithoutRepositoryInput | ContextCreateOrConnectWithoutRepositoryInput[]
+    upsert?: ContextUpsertWithWhereUniqueWithoutRepositoryInput | ContextUpsertWithWhereUniqueWithoutRepositoryInput[]
+    createMany?: ContextCreateManyRepositoryInputEnvelope
+    set?: ContextWhereUniqueInput | ContextWhereUniqueInput[]
+    disconnect?: ContextWhereUniqueInput | ContextWhereUniqueInput[]
+    delete?: ContextWhereUniqueInput | ContextWhereUniqueInput[]
+    connect?: ContextWhereUniqueInput | ContextWhereUniqueInput[]
+    update?: ContextUpdateWithWhereUniqueWithoutRepositoryInput | ContextUpdateWithWhereUniqueWithoutRepositoryInput[]
+    updateMany?: ContextUpdateManyWithWhereWithoutRepositoryInput | ContextUpdateManyWithWhereWithoutRepositoryInput[]
+    deleteMany?: ContextScalarWhereInput | ContextScalarWhereInput[]
+  }
+
+  export type RepositoryCreateNestedOneWithoutContextsInput = {
+    create?: XOR<RepositoryCreateWithoutContextsInput, RepositoryUncheckedCreateWithoutContextsInput>
+    connectOrCreate?: RepositoryCreateOrConnectWithoutContextsInput
+    connect?: RepositoryWhereUniqueInput
+  }
+
+  export type RepositoryUpdateOneRequiredWithoutContextsNestedInput = {
+    create?: XOR<RepositoryCreateWithoutContextsInput, RepositoryUncheckedCreateWithoutContextsInput>
+    connectOrCreate?: RepositoryCreateOrConnectWithoutContextsInput
+    upsert?: RepositoryUpsertWithoutContextsInput
+    connect?: RepositoryWhereUniqueInput
+    update?: XOR<XOR<RepositoryUpdateToOneWithWhereWithoutContextsInput, RepositoryUpdateWithoutContextsInput>, RepositoryUncheckedUpdateWithoutContextsInput>
   }
 
   export type NestedStringFilter<$PrismaModel = never> = {
@@ -3447,6 +3666,129 @@ export namespace Prisma {
     _count?: NestedIntFilter<$PrismaModel>
     _min?: NestedDateTimeFilter<$PrismaModel>
     _max?: NestedDateTimeFilter<$PrismaModel>
+  }
+
+  export type ContextCreateWithoutRepositoryInput = {
+    id?: string
+    content: string
+    filePath: string
+    createdAt?: Date | string
+  }
+
+  export type ContextUncheckedCreateWithoutRepositoryInput = {
+    id?: string
+    content: string
+    filePath: string
+    createdAt?: Date | string
+  }
+
+  export type ContextCreateOrConnectWithoutRepositoryInput = {
+    where: ContextWhereUniqueInput
+    create: XOR<ContextCreateWithoutRepositoryInput, ContextUncheckedCreateWithoutRepositoryInput>
+  }
+
+  export type ContextCreateManyRepositoryInputEnvelope = {
+    data: ContextCreateManyRepositoryInput | ContextCreateManyRepositoryInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type ContextUpsertWithWhereUniqueWithoutRepositoryInput = {
+    where: ContextWhereUniqueInput
+    update: XOR<ContextUpdateWithoutRepositoryInput, ContextUncheckedUpdateWithoutRepositoryInput>
+    create: XOR<ContextCreateWithoutRepositoryInput, ContextUncheckedCreateWithoutRepositoryInput>
+  }
+
+  export type ContextUpdateWithWhereUniqueWithoutRepositoryInput = {
+    where: ContextWhereUniqueInput
+    data: XOR<ContextUpdateWithoutRepositoryInput, ContextUncheckedUpdateWithoutRepositoryInput>
+  }
+
+  export type ContextUpdateManyWithWhereWithoutRepositoryInput = {
+    where: ContextScalarWhereInput
+    data: XOR<ContextUpdateManyMutationInput, ContextUncheckedUpdateManyWithoutRepositoryInput>
+  }
+
+  export type ContextScalarWhereInput = {
+    AND?: ContextScalarWhereInput | ContextScalarWhereInput[]
+    OR?: ContextScalarWhereInput[]
+    NOT?: ContextScalarWhereInput | ContextScalarWhereInput[]
+    id?: StringFilter<"Context"> | string
+    content?: StringFilter<"Context"> | string
+    filePath?: StringFilter<"Context"> | string
+    repoId?: StringFilter<"Context"> | string
+    createdAt?: DateTimeFilter<"Context"> | Date | string
+  }
+
+  export type RepositoryCreateWithoutContextsInput = {
+    id?: string
+    name: string
+    url: string
+    createdAt?: Date | string
+  }
+
+  export type RepositoryUncheckedCreateWithoutContextsInput = {
+    id?: string
+    name: string
+    url: string
+    createdAt?: Date | string
+  }
+
+  export type RepositoryCreateOrConnectWithoutContextsInput = {
+    where: RepositoryWhereUniqueInput
+    create: XOR<RepositoryCreateWithoutContextsInput, RepositoryUncheckedCreateWithoutContextsInput>
+  }
+
+  export type RepositoryUpsertWithoutContextsInput = {
+    update: XOR<RepositoryUpdateWithoutContextsInput, RepositoryUncheckedUpdateWithoutContextsInput>
+    create: XOR<RepositoryCreateWithoutContextsInput, RepositoryUncheckedCreateWithoutContextsInput>
+    where?: RepositoryWhereInput
+  }
+
+  export type RepositoryUpdateToOneWithWhereWithoutContextsInput = {
+    where?: RepositoryWhereInput
+    data: XOR<RepositoryUpdateWithoutContextsInput, RepositoryUncheckedUpdateWithoutContextsInput>
+  }
+
+  export type RepositoryUpdateWithoutContextsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type RepositoryUncheckedUpdateWithoutContextsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ContextCreateManyRepositoryInput = {
+    id?: string
+    content: string
+    filePath: string
+    createdAt?: Date | string
+  }
+
+  export type ContextUpdateWithoutRepositoryInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    content?: StringFieldUpdateOperationsInput | string
+    filePath?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ContextUncheckedUpdateWithoutRepositoryInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    content?: StringFieldUpdateOperationsInput | string
+    filePath?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ContextUncheckedUpdateManyWithoutRepositoryInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    content?: StringFieldUpdateOperationsInput | string
+    filePath?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
 
