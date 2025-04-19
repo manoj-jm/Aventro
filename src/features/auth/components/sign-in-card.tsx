@@ -1,9 +1,12 @@
 "use client";
 import Link from "next/link";
+import { FaGithub } from "react-icons/fa";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
+
+import { signUpWithGithub } from "@/lib/oauth";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { DottedSeparator } from "@/components/dotted-separator";
 import { Button } from "@/components/ui/button";
@@ -21,7 +24,6 @@ import { useLogin } from "../api/use-login";
 
 export const SignInCard = () => {
   const { mutate, isPending } = useLogin();
-
   const form = useForm<LoginSchema>({
     resolver: zodResolver(loginSchema),
     defaultValues: {
@@ -35,7 +37,6 @@ export const SignInCard = () => {
   const onSubmit = (values: LoginSchema) => {
     mutate({ json: values });
   };
-
   return (
     <Card className="size-full border-none bg-neutral-200 shadow-none dark:bg-neutral-900 md:w-[487px]">
       <CardHeader className="flexx items-center justify-center p-7 text-center">
@@ -121,6 +122,18 @@ export const SignInCard = () => {
       <div className="hidden px-7">
         <DottedSeparator />
       </div>
+      <CardContent className="hidden flex-col gap-y-4 p-7">
+        <Button
+          onClick={() => signUpWithGithub()}
+          disabled={isPending}
+          variant="secondary"
+          size="lg"
+          className="w-full border border-zinc-600"
+        >
+          <FaGithub className="mr-2 size-5" />
+          Login with Github
+        </Button>
+      </CardContent>
       <div className="px-7">
         <DottedSeparator />
       </div>
