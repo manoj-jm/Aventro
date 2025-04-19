@@ -19,8 +19,4 @@ export const useGetMembers = ({ workspaceId }: UseGetMembersProps) => {
   });
 
   return query;
-<<<<<<< HEAD
 };
-=======
-};
->>>>>>> f0171ef1949ea98bccbfb868d49f89021478caa8

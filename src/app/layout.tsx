@@ -3,12 +3,7 @@ import { Inter } from "next/font/google";
 
 import { QueryProvider } from "@/components/query-provider";
 import { Toaster } from "@/components/ui/sonner";
-<<<<<<< HEAD
-import { ThemeProvider } from "./theme-provider";
-import Footer from "@/components/Footer";
-=======
 import { cn } from "@/lib/utils";
->>>>>>> f0171ef1949ea98bccbfb868d49f89021478caa8
 
 import "./globals.css";
 import { ThemeProvider } from "./theme-provider";
@@ -20,7 +15,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Aventro",
   description:
-    "Plan, track, and manage your agile and software development projects in aventro. Customize your workflow, collaborate, and release great software",
+    "Plan, track, and manage your agile and software development projects in vaiu. Customize your workflow, collaborate, and release great software",
   icons: {
     icon: "/favicon.svg",
   },
@@ -33,22 +28,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-<<<<<<< HEAD
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
-        <Toaster richColors theme='dark'/>
-        <QueryProvider>
-          {children}
-          <Footer />
-        </QueryProvider>
-=======
       <body className={cn(inter.className, "h-screen antialiased")}>
         <ThemeProvider
           attribute="class"
@@ -63,7 +42,6 @@ export default function RootLayout({
               {children}
             </QueryProvider>
           </TooltipProvider>
->>>>>>> f0171ef1949ea98bccbfb868d49f89021478caa8
         </ThemeProvider>
       </body>
     </html>

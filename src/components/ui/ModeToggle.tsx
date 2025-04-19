@@ -20,8 +20,4 @@ export function ModeToggle() {
       <span className="sr-only">Toggle Theme</span>
     </Button>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> f0171ef1949ea98bccbfb868d49f89021478caa8
