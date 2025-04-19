@@ -19,9 +19,15 @@ import { MemberRole } from "@/features/members/types";
 import { useGetMembers } from "@/features/members/api/use-get-members";
 import { useDeleteMember } from "@/features/members/api/use-delete-member";
 import { useUpdateMember } from "@/features/members/api/use-update-member";
+<<<<<<< HEAD
 import { MemberAvatar } from "@/features/members/components/members-avatar";
 import { useConfirm } from "@/hooks/use-confirm";
 import { useWorkspaceId } from "@/features/workspaces/hooks/use-workspace-id";
+=======
+import { useWorkspaceId } from "@/features/workspaces/hooks/use-workspace-id";
+import { MemberAvatar } from "@/features/members/components/members-avatar";
+import { useConfirm } from "@/hooks/use-confirm";
+>>>>>>> f0171ef1949ea98bccbfb868d49f89021478caa8
 
 export const MembersList = () => {
   const workspaceId = useWorkspaceId();
@@ -128,4 +134,8 @@ export const MembersList = () => {
       </CardContent>
     </Card>
   );
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> f0171ef1949ea98bccbfb868d49f89021478caa8

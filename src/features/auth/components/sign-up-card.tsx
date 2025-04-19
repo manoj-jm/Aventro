@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { FaGithub } from "react-icons/fa";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
@@ -23,6 +24,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { type RegisterSchema, registerSchema } from "../schemas";
 import { useRegister } from "../api/use-register";
+import { signUpWithGithub } from "@/lib/oauth";
 import { Eye, EyeOff } from "lucide-react";
 
 export const SignUpCard = () => {
@@ -41,7 +43,6 @@ export const SignUpCard = () => {
   const onSubmit = (values: RegisterSchema) => {
     mutate({ json: values });
   };
-
   return (
     <Card className="size-full border-none bg-slate-200 shadow-none dark:bg-zinc-800 md:w-[487px]">
       <CardHeader className="flexx items-center justify-center p-7 text-center">
@@ -142,6 +143,18 @@ export const SignUpCard = () => {
       <div className="hidden px-7">
         <DottedSeparator />
       </div>
+      <CardContent className="hidden flex-col gap-y-2 p-7">
+        <Button
+          onClick={() => signUpWithGithub()}
+          disabled={isPending}
+          variant="secondary"
+          size="lg"
+          className="w-full border border-zinc-600"
+        >
+          <FaGithub className="mr-2 size-5" />
+          Login with Github
+        </Button>
+      </CardContent>
       <div className="px-7">
         <DottedSeparator />
       </div>

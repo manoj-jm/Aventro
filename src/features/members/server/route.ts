@@ -7,8 +7,13 @@ import { DATABASE_ID, MEMBERS_ID } from "@/config";
 import { createAdminClient } from "@/lib/appwrite";
 import { sessionMiddleware } from "@/lib/session-middleware";
 
+<<<<<<< HEAD
 import { Member, MemberRole } from "../types";
 import { getMember } from "../utils";
+=======
+import { getMember } from "../utilts";
+import { Member, MemberRole } from "../types";
+>>>>>>> f0171ef1949ea98bccbfb868d49f89021478caa8
 
 const app = new Hono()
   .get(
@@ -136,4 +141,8 @@ const app = new Hono()
       return c.json({ data: { $id: memberToUpdate.$id } });
     }
   );
+<<<<<<< HEAD
 export default app;
+=======
+export default app;
+>>>>>>> f0171ef1949ea98bccbfb868d49f89021478caa8
